@@ -83,9 +83,10 @@ hr {
 .wrapper {
    display: grid; 
    grid-template-columns: [nav] 30% [text] 55%; 
-   grid-template-rows: [top-margin] 80px [title-line] 40px [text] 1fr;
+   grid-template-rows:[top-margin] 80px [title-line] 38px [text] 1fr;
+   /*grid-template-rows: [top-margin] 80px [title-line] 40px [text] 1fr;*/
    grid-column-gap: 20px;
-   grid-row-gap: 10px;
+   grid-row-gap: 15px;
 }
 
 

@@ -74,7 +74,7 @@ His current projects include investigations into:
 
 ```{r echo=FALSE}
 knitr::raw_html(
-'You can reach me at <span class="e-mail" data-user="xela km" data-website="ude.tim [ta] ">.')
+'You can reach me at <span class="e-mail" data-user="xelakm" data-website="ude.tim [ta] ">.')
 ```
 
 

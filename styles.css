@@ -13,7 +13,7 @@ tt, code, pre {
 
 h1 { 
    font-family: 'Jura', sans-serif;
-   font-size:1.95em; 
+   font-size:1.74em; 
    font-weight: 800;
 }
 
@@ -159,3 +159,11 @@ hr {
       page-break-after: avoid; 
    }
 }
+
+.e-mail:before {
+            content: attr(data-website) attr(data-user);
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            color: #4A19D2;
+}
+

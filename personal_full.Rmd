@@ -1,0 +1,99 @@
+---
+pagetitle: "Alexander Kowalski"
+output: 
+  bookdown::html_document2:
+    pandoc_args: --lua-filter=multiple-bibliographies.lua
+    includes:
+      in_header: header.html
+    css: styles.css
+bibliography_published: published.bib
+bibliography_unpublished: unpublished.bib
+csl: apa.csl
+nocite: |
+  @Cohen_1992, @McConnell_2015, @moyer2019correct, @Cohen_1983, 
+  @WOERTMAN2013752
+---
+
+:::: {.wrapper}
+::: {}
+
+
+:::
+
+
+::: {}
+
+
+:::
+
+
+::: {.nameplate}
+# ALEXANDER KOWALSKI
+
+
+:::
+
+
+::: {}
+
+:::
+
+
+::: {.nav}
+
+![](images/headshot_2019.jpeg)
+
+#### [About](#header)
+
+#### [Research](#research)
+
+#### [Teaching](#teaching)
+
+#### [Contact](#contact)
+
+:::
+
+
+::: {.text}
+
+Alex is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Say my degrees.
+
+Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Paragraph describing who I am.
+
+Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Paragraph describing my research.  
+
+### Research
+
+##### ARTICLES
+
+::: {#refs_published}
+:::
+
+##### WORK IN PROGESS
+
+::: {#refs_unpublished}
+:::
+
+##### CV
+
+E-mail [me](mailto:test@email.com) for a CV.  
+
+###### [Top &olarr;](#header)  
+
+### Teaching
+
+Alex's goal with teaching has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Say my degrees.
+
+- **15.100** *Learning* with Prof. Jane Doe
+- **15.998** *Learning things* with Prof. John Doe
+- **15.999** *Learning more things* with Prof.'s John and Jane Doe
+
+###### [Top &olarr;](#header)  
+
+### Contact
+
+You can reach me at [alex&lbrack;at&rbrack;kowalski.com](mailto:alex@kowalski.com)
+
+:::
+
+::::

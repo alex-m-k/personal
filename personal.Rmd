@@ -4,7 +4,7 @@ output:
   bookdown::html_document2:
     pandoc_args: --lua-filter=multiple-bibliographies.lua
     includes:
-      in_header: header.html
+      in_header: ["header.html", "ga_Script.html"]
     css: styles.css
 bibliography_published: published.bib
 bibliography_unpublished: unpublished.bib

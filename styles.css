@@ -43,7 +43,11 @@ h6 {
 }
 
 a:link, a:visited, a:hover, a:active {
-   color: rgb(212, 25, 68);
+   
+   /*This was the original color
+   color: rgb(212, 25, 68);*/
+  color: rgb(74, 25, 210);
+
 }
 
 pre {	
@@ -160,10 +164,21 @@ hr {
    }
 }
 
-.e-mail:before {
+/*.e-mail:before {
             content: attr(data-website) attr(data-user);
             unicode-bidi: bidi-override;
             direction: rtl;
             color: #4A19D2;
+}*/
+
+.mailbox {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  text-align: left;
+}
+.e-mail:before {
+  content: attr(data-website) attr(data-user);
+  color: #4A19D2;
+
 }
 

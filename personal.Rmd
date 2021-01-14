@@ -6,10 +6,13 @@ output:
     includes:
       in_header: ["header.html", "ga_Script.html"]
     css: styles.css
-bibliography_published: published.bib
-bibliography_unpublished: unpublished.bib
-csl: apa.csl
-nocite: |
+bibliography_published: bibliography_kowalski.bib 
+link-citations: yes
+linkcolor: blue
+# bibliography_unpublished: unpublished.bib
+csl: apa_sort.csl
+nocite: | 
+  @Riordan_2020, @Kochan_2019, @Kochan_2018
 ---
 
 ```{js jQuery-codechunk, echo = FALSE}
@@ -57,7 +60,7 @@ $('a.mail').on('click', function(){
 
 Alex Kowalski is a PhD candidate in the Institute for Work and Employment Research at the MIT Sloan School of Management. He is also affiliated with Sloan's economic sociology group.
 
-Alex studies worker involvement in the future of work. With the development of new technologies and an ever-changing business environment, firms are faced with numerous opportunities to rearrange work and implement new practices and policies. Empowering workers by including them in decisions surrounding these changes presents both benefits and challenges. 
+Alex studies worker involvement in the future of work. With the development of new technologies and an ever-changing business environment, firms are faced with numerous opportunities to rearrange work and implement new practices and policies. Empowering workers by including them in decisions surrounding these changes offers both opportunity and challenge. 
 
 At present, Alex is studying involvement in decisions that pertain to the timing, tools, and technologies used to arrange and perform work. This research takes place inside warehouses, which are part of a rapidly evolving sector of the U.S. economy. A setting replete with contrasts, warehouses are employing more and more people as e-commerce grows yet are also sites where concerns about job quality are primary and innovation in robotics is proceeding apace.
 
@@ -70,14 +73,46 @@ His current projects include investigations into:
 - The challenges of implementing performance pay systems
 - The significance of worker identity and value systems in workplace conflict
 
+### Research
+
+<!-- ::: {#refs_published} -->
+<!-- ::: -->
+
+Riordan, C. A., & Kowalski, A. M. (2020). [From bread and roses to \#MeToo: Multiplicity, distance, and the changing dynamics of conflict in IR theory](https://doi.org/10.1177%2F0019793920970868). Forthcoming at *ILR Review*.
+<details> 
+<summary>Show abstract</summary>
+    
+A central assumption in industrial relations theory is that conflict is rooted in an enduring difference between the interests of labor and management. In recent years, the reality of work has changed for many, and scholarship has called attention to overlooked dimensions of conflict that depart from this assumption. The authors account for these developments with the concepts of *multiplicity* and *distance*. Multiplicity means that a broad range of actors bring diverse goals, tied to identities and values in addition to interests, to the employment relationship. The competing and fluid motivations that stem from these goals alter how actors individually and collectively name conflict. Distance reflects a growing rift between those who control work and those who labor, rooted in prevailing organizational forms and practices and the transformation of institutions. Distance alters actors’ interdependence and their perceived and actual power in addressing conflict. From these observations, the authors derive propositions suggesting directions for research and theory regarding conflict and the institutions through which actors balance goals.
+    
+</details> 
+
+\
+
+Kochan, T. A., Riordan, C. A., Kowalski, A. M., Khan, M., & Yang, D. (2019). [The changing nature of employee and labor-management relationships](https://doi.org/10.1146/annurev-orgpsych-012218-015335). *Annual Review of Organizational Psychology and Organizational Behavior*, 6(1), 195–219.
+<details> 
+<summary>Show abstract</summary>
+    
+This article reviews work and employment research, paying particular attention to theory and applications by scholars in organizational psychology and organizational behavior (OP/OB) and employment or industrial relations (ER), with the objective of better understanding employee and labor-management relationships. Our animating premise is that juxtaposing these two research traditions provides a stronger basis for analyzing these relationships today. OP/OB offer micro- and meso-level focuses, whereas ER focuses on organizations, collective actors, and labor markets, with an emphasis on historical context. We hope this review motivates efforts to think about and build new social and psychological contracts that are attuned to the evolving dynamics present in the economy, workforce, and society. To this end, we look to the future and propose ways of deepening, broadening, and accelerating the pace of research that might lead to useful changes in practices, institutions, and public policies.
+    
+</details> 
+
+\
+
+Kochan, T. A., Dyer, L., Cutcher-Gershenfeld, J., & Kowalski, A. M. (2018). [Negotiating a new social contract for work: An online, distributed approach](https://doi.org/10.1111%2Fnejo.12223). *Negotiation Journal*, 34(2), 187–206. 
+<details> 
+<summary>Show abstract</summary>
+    
+A massive open online course (MOOC) entitled “Shaping the Future of Work” (offered through MITx, the Massachusetts Institute of Technology's online learning division) has been the context for a multiparty simulation designed to produce classroom negotiation results that will have social impacts. After running the course in the MOOC context three times and in face‐to‐face settings eight times, we noticed that key themes emerged. Participants have brought their own workforce perspectives to their simulation roles as employers, worker representatives, elected officials, and educators. They have called for reciprocal agreements centered on fair treatment and representation in the workplace, improved organizational performance, investments in skills and capabilities, aligned rewards and benefits for workers, and work–life balance in communities. We continue to use the simulation in the classroom and are exploring ways to expand its use. In the meantime, in this article, we discuss how the insights gleaned from this simulation could be used to crystallize and advance a new social contract at a time when the public policies, institutions, and organizational practices governing employment relations have not kept up with the dramatic changes taking place in the workforce, nature of work, and overall economy.
+    
+</details> 
+
+
 ### Contact
 
 ```{r echo=FALSE}
 knitr::raw_html(
-'You can reach me at <span class="e-mail" data-user="xelakm" data-website="ude.tim [ta] ">.')
+'You can reach me at <span class="mailbox"><span class="e-mail" data-user="xelakm" data-website="ude.tim [ta] "></span></span>.')
 ```
-
-
 
 :::
 

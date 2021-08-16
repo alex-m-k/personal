@@ -58,20 +58,13 @@ $('a.mail').on('click', function(){
 
 ::: {.text}
 
-Alex Kowalski is a PhD candidate in the Institute for Work and Employment Research at the MIT Sloan School of Management. He is also affiliated with Sloan's economic sociology group.
+Alex Kowalski is a PhD candidate in the Institute for Work & Employment Research at the MIT Sloan School of Management. He is also affiliated with Sloan's economic sociology group.
 
-Alex studies worker involvement in the future of work. With the development of new technologies and an ever-changing business environment, firms are faced with numerous opportunities to rearrange work and implement new practices and policies. Empowering workers by including them in decisions surrounding these changes offers both opportunity and challenge. 
+Alex studies the ways that managers pass business uncertainty onto their workforce and how their decisions affect employer and employee outcomes. His research takes place primarily inside e-commerce fulfillment centers, where demand volatility and intense time pressures often give rise to unpredictable work schedules that employees feel to be out of their control. Using a variety of research methods ranging from interviews to field experiments, he shows how certain managerial cultures generate problematic schedules, how these schedules tend to accrue to already disadvantaged employees, and how these schedules are costly to employers. 
 
-At present, Alex is studying involvement in decisions that pertain to the timing, tools, and technologies used to arrange and perform work. This research takes place inside warehouses, which are part of a rapidly evolving sector of the U.S. economy. A setting replete with contrasts, warehouses are employing more and more people as e-commerce grows yet are also sites where concerns about job quality are primary and innovation in robotics is proceeding apace.
+Fulfillment centers are part of the rapidly evolving warehousing industry. A setting replete with contrasts, warehouses are employing more and more people as e-commerce grows yet are also sites where concerns about job quality are primary and innovation in robotics is proceeding apace. In addition to his focus on scheduling practices, Alex is also carrying out projects inside warehouses that look into the challenges of implementing performance pay systems, competing approaches to robotic automation, and the benefits of involving employees in workplace problem-solving. 
 
-His current projects include investigations into:
-
-- Variation in management approaches to work scheduling and their workforce implications
-- Temporal precarity, or how schedules differentially impact different groups of workers' well-being and turnover
-- The benefits of giving workers greater control over their schedules
-- Competing approaches to robotic automation in warehouses and their workforce implications
-- The challenges of implementing performance pay systems
-- The significance of worker identity and value systems in workplace conflict
+Alex's earlier work takes a broader look at the changing nature of work and organizations and has been published in *ILR Review*, *Annual Review of Organizational Psychology and Organizational Behavior*, and *Negotiation Journal*.
 
 ### Research
 

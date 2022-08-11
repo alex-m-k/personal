@@ -8,7 +8,7 @@ output:
     css: styles.css
 bibliography_published: published.bib
 bibliography_unpublished: unpublished.bib
-csl: apa.csl
+csl: apa_sort.csl
 nocite: |
   @Cohen_1992, @McConnell_2015, @moyer2019correct, @Cohen_1983, 
   @WOERTMAN2013752

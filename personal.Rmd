@@ -2,10 +2,11 @@
 pagetitle: "Alexander Kowalski"
 output: 
   bookdown::html_document2:
-    pandoc_args: --lua-filter=multiple-bibliographies.lua
+    # pandoc_args: --lua-filter=multiple-bibliographies.lua # This was creating issuesb
     includes:
       in_header: ["header.html", "ga_Script.html"]
     css: styles.css
+    number_sections: false
 bibliography_published: bibliography_kowalski.bib 
 link-citations: yes
 linkcolor: blue
@@ -58,13 +59,15 @@ $('a.mail').on('click', function(){
 
 ::: {.text}
 
-Alex Kowalski is a PhD candidate in the Institute for Work & Employment Research at the MIT Sloan School of Management. He is also affiliated with Sloan's economic sociology group.
+Alex Kowalski is an assistant professor in the Human Resource Studies department at Cornell University's [ILR School](https://www.ilr.cornell.edu/).
 
-Alex studies the ways that managers pass business uncertainty onto their workforce and how their decisions affect employer and employee outcomes. His research takes place primarily inside e-commerce fulfillment centers, where demand volatility and intense time pressures often give rise to unpredictable work schedules that employees feel to be out of their control. Using a variety of research methods ranging from interviews to field experiments, he shows how certain managerial cultures generate problematic schedules, how these schedules tend to accrue to already disadvantaged employees, and how these schedules are costly to employers. 
+Alex studies how to support good quality jobs in challenging business environments. His research takes place primarily inside e-commerce fulfillment centers, where demand volatility and intense time pressures often give rise to unpredictable work schedules that employees feel to be out of their control. Using a variety of research methods ranging from interviews to field experiments, he shows how certain managerial cultures generate problematic schedules, how these schedules tend to accrue to already disadvantaged employees, and how these schedules are costly to employers. 
 
 Fulfillment centers are part of the rapidly evolving warehousing industry. A setting replete with contrasts, warehouses are employing more and more people as e-commerce grows yet are also sites where concerns about job quality are primary and innovation in robotics is proceeding apace. In addition to his focus on scheduling practices, Alex is also carrying out projects inside warehouses that look into the challenges of implementing performance pay systems, competing approaches to robotic automation, and the benefits of involving employees in workplace problem-solving. 
 
 Alex's earlier work takes a broader look at the changing nature of work and organizations and has been published in *ILR Review*, *Annual Review of Organizational Psychology and Organizational Behavior*, and *Negotiation Journal*.
+
+He received his PhD from MIT. He also holds a Master's in City Planning from UC-Berkeley. Before graduate school, he was an economics reporter for Bloomberg News.
 
 ### Research
 
@@ -104,7 +107,7 @@ A massive open online course (MOOC) entitled “Shaping the Future of Work” (o
 
 ```{r echo=FALSE}
 knitr::raw_html(
-'You can reach me at <span class="mailbox"><span class="e-mail" data-user="xelakm" data-website="ude.tim [ta] "></span></span>.')
+'You can reach me at <span class="mailbox"><span class="e-mail" data-user="ikslawok.xela" data-website="ude.llenroc [ta] "></span></span>.')
 ```
 
 :::

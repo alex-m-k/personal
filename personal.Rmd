@@ -13,7 +13,7 @@ linkcolor: blue
 # bibliography_unpublished: unpublished.bib
 csl: apa_sort.csl
 nocite: | 
-  @Riordan_2020, @Kochan_2019, @Kochan_2018
+  @Riordan_2020, @Kochan_2019, @Kochan_2018 
 ---
 
 ```{js jQuery-codechunk, echo = FALSE}

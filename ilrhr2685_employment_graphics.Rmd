@@ -1,7 +1,7 @@
 ---
 title: "Job growth in occupations susceptible to automation"
 author: "Alexander Kowalski"
-date: '2023-02-03'
+date: '2023-09-01'
 output: 
   html_document:
     keep_md: TRUE
@@ -52,6 +52,34 @@ start_year <- 2009 # End of recession
 ```
 
 ```{r get_data, include=FALSE, cache=TRUE}
+# The way to find codes isn't super easy.
+#  Basically go to BLS data finder, type in occupation name, then filter by labor force statistics/CPS and look at the unadj employed field
+
+## Telemarketers # Note that this employment level agrees with CPS report but not with OES projections, which have much more people employed in this industry
+# LNU02038429
+## Title examiners
+# LNU0201A4FF
+# Before 2020, they were about .54 of Misc legal support, which is LNU02038292
+#  Note for future: what I am doing is look at summary vs line occupational title
+#   whenever the graph only spans a few years, meaning, they disaggregated the titles
+## Sewers, hand
+# 0.2 of sewers LNU02038608
+## Mathematical science occupations
+# LNU02038240
+## Insurance underwriters
+# LNU02038223
+## Watch repairers
+# .03 of LNU02038558 precision equipment repairers
+## Cargo and freight agents
+# LNU02038460
+## Tax preparers
+# LNU02038227
+## Photographic process operators
+# LNU02038637
+## New accounts clerks
+# LNU02038454
+
+#### OLD #####
 # # Recreational therapists
 # LNU02038336
 # # First-line supervisors of mechanics, installers, and repairers
@@ -74,37 +102,45 @@ start_year <- 2009 # End of recession
 # LNU02038360 
 # # All # (Unadj) Empl. Level All Industries Wage & Sal Wkrs
 # LNU02000000
+######
 
-df <- bls_api(c("LNU02038336", "LNU02038531", "LNU02078290", "LNU02038284",
-                "LNU02038332", "LNU02038333", "LNU02038350", "LNU02038324", 
-                "LNU02038360", "LNU02000000"),
+df <- bls_api(c("LNU02038429", "LNU0201A4FF", "LNU02038292", "LNU02038608",
+                "LNU02038240", "LNU02038223", "LNU02038558", "LNU02038460", 
+                "LNU02038227", "LNU02038637", "LNU02038454", 
+                # All occupations
+                "LNU02000000"),
                 # Can only do 10 at a time
-              startyear = 2012, endyear = 2021, Sys.getenv("BLS_KEY")) %>%
+              startyear = 2013, endyear = 2022, Sys.getenv("BLS_KEY")) %>%
     # Add time-series dates
     dateCast()
 
 
 df$Occupation <- NA
-df$Occupation[df$seriesID == "LNU02038336"] <- "Recreational therapists"
-df$Occupation[df$seriesID == "LNU02038531"] <- "First-line supervisors of mechanics, installers, and repairers"
-df$Occupation[df$seriesID == "LNU02078290"] <- "Emergency management directors"
-df$Occupation[df$seriesID == "LNU02038332"] <- "Audiologists"
-df$Occupation[df$seriesID == "LNU02038333"] <- "Occupational therapists"
-df$Occupation[df$seriesID == "LNU02038350"] <- "Orthotists and prosthetists"
-df$Occupation[df$seriesID == "LNU02038324"] <- "Oral and maxillofacial surgeons"
-df$Occupation[df$seriesID == "LNU02038360"] <- "First-Line Supervisors Of Fire Fighting And Prevention Workers"
+df$Occupation[df$seriesID == "LNU02038429"] <- "Telemarketers"
+df$Occupation[df$seriesID == "LNU0201A4FF"] <- "Title examiners, abstractors, and searchers"
+df$Occupation[df$seriesID == "LNU02038292"] <- "Title examiners, abstractors, and searchers"
+df$Occupation[df$seriesID == "LNU02038608"] <- "Sewers, hand"
+df$Occupation[df$seriesID == "LNU02038240"] <- "Mathematical science occupations"
+df$Occupation[df$seriesID == "LNU02038223"] <- "Insurance underwriters"
+df$Occupation[df$seriesID == "LNU02038558"] <- "Watch repairers"
+df$Occupation[df$seriesID == "LNU02038460"] <- "Cargo and freight agents"
+df$Occupation[df$seriesID == "LNU02038227"] <- "Tax preparers"
+df$Occupation[df$seriesID == "LNU02038637"] <- "Photographic process workers and processing machine operators"
+df$Occupation[df$seriesID == "LNU02038454"] <- "New accounts clerks"
 df$Occupation[df$seriesID == "LNU02000000"] <- "All occupations"
-df$Occupation[df$seriesID == "LNU02038284"] <- "Social workers"
 
 set.seed(8475)
-hc_soc <- df[df$seriesID == "LNU02038284", ]
-hc_soc$Occupation <- "Healthcare social workers"
-hc_soc$value <- round((hc_soc$value + round(rnorm(1, 0, sd = 4))) * .3)
+# hc_soc <- df[df$seriesID == "LNU02038608", ]
+# hc_soc$Occupation <- "Healthcare social workers"
+# hc_soc$value <- round((hc_soc$value + round(rnorm(1, 0, sd = 4))) * .3)
+# 
+# mh_soc <- df[df$seriesID == "LNU02038284", ]
+# mh_soc$Occupation <- "Mental health and substance abuse social workers"
+# mh_soc$value <- round((mh_soc$value + round(rnorm(1, 0, sd = 4))) * .2)
 
-mh_soc <- df[df$seriesID == "LNU02038284", ]
-mh_soc$Occupation <- "Mental health and substance abuse social workers"
-mh_soc$value <- round((mh_soc$value + round(rnorm(1, 0, sd = 4))) * .2)
-
+# Note: I bet these unadjusted numbers are all collected in on month
+#   Maybe March, so it's probably better to take the month total employment measure
+#    rather than average. Next time.
 tot <- df[df$seriesID == "LNU02000000", ]
 tot <- tot %>% 
   group_by(year) %>%
@@ -113,13 +149,17 @@ tot <- tot %>%
   slice(1) %>%
   select(-avg)
 
-df <- rbind(df[!df$seriesID %in% c("LNU02038284", "LNU02000000"), ], 
-            mh_soc, hc_soc, tot)
+# df <- rbind(df[!df$seriesID %in% c("LNU02038284", "LNU02000000"), ], 
+#             mh_soc, hc_soc, tot)
+df <- rbind(df[!df$seriesID %in% c("LNU02000000"), ], 
+            tot)
 
-# Orthotist emp levels
-df$value[df$Occupation == "Orthotists and prosthetists"] <- df$value[df$Occupation == "Orthotists and prosthetists"] * (.07 + rnorm(1, 0, 0.005))
-# Dentists
-df$value[df$Occupation == "Oral and maxillofacial surgeons"] <- df$value[df$Occupation == "Oral and maxillofacial surgeons"] * (.04 + rnorm(1, 0, 0.005))
+# Sewers emp levels
+df$value[df$Occupation == "Sewers, hand"] <- df$value[df$Occupation == "Sewers, hand"] * (.2 + rnorm(1, 0, 0.005))
+# Watch repairers
+df$value[df$Occupation == "Watch repairers"] <- df$value[df$Occupation == "Watch repairers"] * (.03 + rnorm(1, 0, 0.005))
+# Title examiners
+df$value[df$Occupation == "Title examiners, abstractors, and searchers" & df$year < 2020] <- df$value[df$Occupation == "Title examiners, abstractors, and searchers" & df$year < 2020] * (.54 + rnorm(1, 0, 0.005))
 
 # Normalize the growth
 df <- df %>%
@@ -127,22 +167,25 @@ df <- df %>%
   mutate(base_value = value[year == min(year)],
          norm_value = ((value / base_value) -1) * 100)
 
+df$year <- as.integer(df$year)
+
 ```
 
 The following graphs use BLS data to show how much a given occupation's employment has changed over the past decade or so. Each graph displays the percent change in an occupation's employment levels relative to the first year the graph begins. It also compares this change to the overall change in employment across all occupations in the U.S.
 
-## Recreational therapists
+## Telemarketers
 
 ```{r rt, echo = FALSE}
 
-title <- paste0("Change in recreational therapists' employment levels" )
+title <- paste0("Change in telemarketers' employment levels" )
 
-ggplot(df[df$Occupation %in% c("Recreational therapists", 
+ggplot(df[df$Occupation %in% c("Telemarketers", 
                                "All occupations"), ],
        aes(x = year, 
            y = norm_value,
            color = Occupation)) +
   geom_line(aes(linetype = Occupation)) +
+  scale_x_continuous(breaks = ~ axisTicks(., log = FALSE)) +
     scale_linetype_manual(values=c("dashed", "solid"))+
   labs(title = title,
        x = "Year",
@@ -154,18 +197,19 @@ ggplot(df[df$Occupation %in% c("Recreational therapists",
 ```
 
 
-## First-line supervisors of mechanics, installers, and repairers
+## Title examiners, abstractors, and searchers
 
 ```{r fls, echo = FALSE}
 
-title <- paste0("Change in first-line supervisors of mechanics, installers, and\nrepairers' employment levels" )
+title <- paste0("Change in title examiners' employment levels" )
 
-ggplot(df[df$Occupation %in% c("First-line supervisors of mechanics, installers, and repairers", 
+ggplot(df[df$Occupation %in% c("Title examiners, abstractors, and searchers", 
                                "All occupations"), ],
        aes(x = year, 
            y = norm_value,
            color = Occupation)) +
   geom_line(aes(linetype = Occupation)) +
+    scale_x_continuous(breaks = ~ axisTicks(., log = FALSE)) +
     scale_linetype_manual(values=c("dashed", "solid"))+
   labs(title = title,
        x = "Year",
@@ -176,18 +220,19 @@ ggplot(df[df$Occupation %in% c("First-line supervisors of mechanics, installers,
 
 ```
 
-## Emergency management directors
+## Sewers, hand
 
 ```{r emg, echo = FALSE}
 
-title <- paste0("Change in emergency management directors' employment levels" )
+title <- paste0("Change in sewers' (hand) employment levels" )
 
-ggplot(df[df$Occupation %in% c("Emergency management directors", 
+ggplot(df[df$Occupation %in% c("Sewers, hand", 
                                "All occupations"), ],
        aes(x = year, 
            y = norm_value,
            color = Occupation)) +
   geom_line(aes(linetype = Occupation)) +
+    scale_x_continuous(breaks = ~ axisTicks(., log = FALSE)) +
     scale_linetype_manual(values=c("dashed", "solid"))+
   labs(title = title,
        x = "Year",
@@ -198,41 +243,42 @@ ggplot(df[df$Occupation %in% c("Emergency management directors",
 
 ```
 
-## Mental health and substance abuse social workers
+## Mathematical science occupations
 
 ```{r msc, echo = FALSE}
 
-title <- paste0("Change in mental health and substance abuse social\nworkers' employment levels" )
+title <- paste0("Change in mathematical science occupations' employment levels" )
 
-ggplot(df[df$Occupation %in% c("Mental health and substance abuse social workers", 
+ggplot(df[df$Occupation %in% c("Mathematical science occupations", 
                                "All occupations"), ],
        aes(x = year, 
            y = norm_value,
            color = Occupation)) +
   geom_line(aes(linetype = Occupation)) +
+    scale_x_continuous(breaks = ~ axisTicks(., log = FALSE)) +
     scale_linetype_manual(values=c("dashed", "solid"))+
   labs(title = title,
        x = "Year",
-       y = "Percent change in employment levels",
-       caption = "For some reason, the BLS stopped tracking this occupation after 2018. This does not mean this job no longer exists!") +
-  ylim(-120, 120) +
+       y = "Percent change in employment levels") +
+ # ylim(-120, 120) +
   plot_theme +
   theme(legend.position ="bottom")
 
 ```
 
-## Audiologists
+## Insurance underwiters
 
 ```{r aud, echo = FALSE}
 
-title <- paste0("Change in audiologists' employment levels" )
+title <- paste0("Change insurance underwriters' employment levels" )
 
-ggplot(df[df$Occupation %in% c("Audiologists", 
+ggplot(df[df$Occupation %in% c("Insurance underwriters", 
                                "All occupations"), ],
        aes(x = year, 
            y = norm_value,
            color = Occupation)) +
   geom_line(aes(linetype = Occupation)) +
+    scale_x_continuous(breaks = ~ axisTicks(., log = FALSE)) +
     scale_linetype_manual(values=c("dashed", "solid"))+
   labs(title = title,
        x = "Year",
@@ -243,18 +289,19 @@ ggplot(df[df$Occupation %in% c("Audiologists",
 
 ```
 
-## Occupational therapists
+## Watch repairers
 
 ```{r ot, echo = FALSE}
 
-title <- paste0("Change in occupational therapists' employment levels" )
+title <- paste0("Change in watch repairers' employment levels" )
 
-ggplot(df[df$Occupation %in% c("Occupational therapists", 
+ggplot(df[df$Occupation %in% c("Watch repairers", 
                                "All occupations"), ],
        aes(x = year, 
            y = norm_value,
            color = Occupation)) +
   geom_line(aes(linetype = Occupation)) +
+    scale_x_continuous(breaks = ~ axisTicks(., log = FALSE)) +
     scale_linetype_manual(values=c("dashed", "solid"))+
   labs(title = title,
        x = "Year",
@@ -265,19 +312,19 @@ ggplot(df[df$Occupation %in% c("Occupational therapists",
 
 ```
 
-
-## Orthotists and prosthetists
+## Cargo and freight agents
 
 ```{r orth, echo = FALSE}
 
-title <- paste0("Change in orthotists and prosthetists' employment levels" )
+title <- paste0("Change in cargo and freight agents' employment levels" )
 
-ggplot(df[df$Occupation %in% c("Orthotists and prosthetists", 
+ggplot(df[df$Occupation %in% c("Cargo and freight agents", 
                                "All occupations"), ],
        aes(x = year, 
            y = norm_value,
            color = Occupation)) +
   geom_line(aes(linetype = Occupation)) +
+    scale_x_continuous(breaks = ~ axisTicks(., log = FALSE)) +
     scale_linetype_manual(values=c("dashed", "solid"))+
   labs(title = title,
        x = "Year",
@@ -288,42 +335,43 @@ ggplot(df[df$Occupation %in% c("Orthotists and prosthetists",
 
 ```
 
-## Healthcare social workers
+## Tax preparers
 
 ```{r hsc, echo = FALSE}
 
-title <- paste0("Change in healthcare social workers' employment levels" )
+title <- paste0("Change in tax preparers' employment levels" )
 
-ggplot(df[df$Occupation %in% c("Healthcare social workers", 
+ggplot(df[df$Occupation %in% c("Tax preparers", 
                                "All occupations"), ],
        aes(x = year, 
            y = norm_value,
            color = Occupation)) +
   geom_line(aes(linetype = Occupation)) +
     scale_linetype_manual(values=c("dashed", "solid"))+
+    scale_x_continuous(breaks = ~ axisTicks(., log = FALSE)) +
    labs(title = title,
        x = "Year",
-       y = "Percent change in employment levels",
-       caption = "For some reason, the BLS stopped tracking this occupation after 2018. This does not mean this job no longer exists!") +
+       y = "Percent change in employment levels") +
   ylim(-120, 120) +
   plot_theme +
   theme(legend.position ="bottom") 
 
 ```
 
-## Oral and maxillofacial surgeons
+## Photographic process workers and processing machine operators
 
 ```{r oral, echo = FALSE}
 
-title <- paste0("Change in oral and maxillofacial surgeons' employment levels" )
+title <- paste0("Change in photographic process workers' employment levels" )
 
-ggplot(df[df$Occupation %in% c("Oral and maxillofacial surgeons", 
+ggplot(df[df$Occupation %in% c("Photographic process workers and processing machine operators", 
                                "All occupations"), ],
        aes(x = year, 
            y = norm_value,
            color = Occupation)) +
   geom_line(aes(linetype = Occupation)) +
     scale_linetype_manual(values=c("dashed", "solid"))+
+    scale_x_continuous(breaks = ~ axisTicks(., log = FALSE)) +
   labs(title = title,
        x = "Year",
        y = "Percent change in employment levels") +
@@ -333,20 +381,20 @@ ggplot(df[df$Occupation %in% c("Oral and maxillofacial surgeons",
 
 ```
 
-
-## First-line supervisors of fire fighting and prevention workers
+## New account clerks
 
 ```{r flsf, echo = FALSE}
 
-title <- paste0("Change in first-Line supervisors of fire fighting and\nprevention workers' employment levels" )
+title <- paste0("Change in new accounts clerks' employment levels" )
 
-ggplot(df[df$Occupation %in% c("First-Line Supervisors Of Fire Fighting And Prevention Workers", 
+ggplot(df[df$Occupation %in% c("New accounts clerks", 
                                "All occupations"), ],
        aes(x = year, 
            y = norm_value,
            color = Occupation)) +
   geom_line(aes(linetype = Occupation)) +
     scale_linetype_manual(values=c("dashed", "solid"))+
+    scale_x_continuous(breaks = ~ axisTicks(., log = FALSE)) +
   labs(title = title,
        x = "Year",
        y = "Percent change in employment levels") +

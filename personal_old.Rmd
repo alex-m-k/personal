@@ -16,7 +16,6 @@ nocite: |
   @Riordan_2020, @Kochan_2019, @Kochan_2018 
 ---
 
-
 ```{js jQuery-codechunk, echo = FALSE}
 
 $('a.mail').on('click', function(){
@@ -29,65 +28,48 @@ $('a.mail').on('click', function(){
 :::: {.wrapper}
 ::: {}
 
+
 :::
+
 
 ::: {}
 
+
 :::
+
 
 ::: {.nameplate}
 # ALEXANDER KOWALSKI
 
+
 :::
+
 
 ::: {}
 
 :::
+
 
 ::: {.nav}
 
 ![](images/headshot_chrtwn_1.jpg)
 
-#### [About](#header)
-
-#### [Research](#research)
-
-#### [Teaching](#teaching)
-
-#### [Media](#media)
-
-#### [Contact](#contact)
-
-\ 
-
-\
-<p align="justify">
-*A note to practitioners*: A key component of my work is going inside workplaces to speak with workers and managers, those who know the challenges best and who also often have the best idea for how to fix things. Do you run, work for, or know a company that wants to offer better jobs or that should be highlighted for already offering them? [Reach out](#contact) and tell me about it.
-</p>
-
 :::
 
+
 ::: {.text}
+
 Alex Kowalski is an assistant professor in the Human Resource Studies department at Cornell University's [ILR School](https://www.ilr.cornell.edu/).
 
-Alex studies how to support good quality jobs in challenging business environments. He currently focuses on the ways managers foist business risk and market uncertainty onto their workforce. He asks why and how managers make this shift, what it means for workers and firm performance, and how the negative consequences can be remedied, with an emphasis on bringing worker voices into the solution.
-
-His research takes place primarily inside e-commerce fulfillment centers, where demand volatility and intense time pressures often give rise to unpredictable work schedules that employees feel to be out of their control. Using a variety of research methods ranging from interviews to field experiments, he shows how certain managerial strategies generate problematic schedules, how these schedules tend to accrue to already disadvantaged employees, and how these schedules are costly to employers. 
+Alex studies how to support good quality jobs in challenging business environments. His research takes place primarily inside e-commerce fulfillment centers, where demand volatility and intense time pressures often give rise to unpredictable work schedules that employees feel to be out of their control. Using a variety of research methods ranging from interviews to field experiments, he shows how certain managerial cultures generate problematic schedules, how these schedules tend to accrue to already disadvantaged employees, and how these schedules are costly to employers. 
 
 Fulfillment centers are part of the rapidly evolving warehousing industry. A setting replete with contrasts, warehouses are employing more and more people as e-commerce grows yet are also sites where concerns about job quality are primary and innovation in robotics is proceeding apace. In addition to his focus on scheduling practices, Alex is also carrying out projects inside warehouses that look into the challenges of implementing performance pay systems, competing approaches to robotic automation, and the benefits of involving employees in workplace problem-solving. 
-
-By conducting his research out in the field, in actual workplaces, Alex tries to make his findings useful for business practitioners. He brings these insights into the classroom, where he teaches classes on High Road, high performance management and human resource practices, as well as on the ingredients of a good job.
 
 Alex's earlier work takes a broader look at the changing nature of work and organizations and has been published in *ILR Review*, *Annual Review of Organizational Psychology and Organizational Behavior*, and *Negotiation Journal*.
 
 He received his PhD from MIT. He also holds a Master's in City Planning from UC-Berkeley. Before graduate school, he was an economics reporter for Bloomberg News.
 
-
-<br>
-
-#### <a id="research"></a>Research
-
-##### Published
+### Research
 
 <!-- ::: {#refs_published} -->
 <!-- ::: -->
@@ -120,90 +102,14 @@ A massive open online course (MOOC) entitled “Shaping the Future of Work” (o
     
 </details> 
 
-\
 
-##### Work in progress
-
-Kowalski, A.M., Gutelius, B., Pinto, S. & Vallas, S.P. At the mercy of the market? Technology, e-commerce, and warehouse work in the United States.
-
-Kowalski, A.M., Kelly, E.L.,, Rahmandad, H., & Siebach, K. Can involving employees reduce turnover? A field experiment on employee voice and exit.
-
-Kowalski, A.M. How to squeeze the lemon: Local organizational cultures and varied management practices.
-
-Kowalski, A.M. and Kelly, E.L. The toll of toil: The turnover costs of problematic work schedules.
-
-<br>
-
-#### <a id="teaching"></a> Teaching
-
-Alex has developed two courses at Cornell. The first, *People and Profits: HR Strategies for Good Jobs*, is a class aimed at undergraduates and master's students that reviews the best practices that businesses are using to treat their employees well while remaining competitive. The second, *Building Better Jobs*, is an undergraduate seminar that draws on ethnographies of work to figure out what it would mean to have a high quality job in the age of automation. More details below.
-
-**ILRHR 4645/6645** *People and Profits: HR Strategies for Good Jobs*
-<details> 
-<summary>Details</summary>
-    
-Economic, social, technological, and political upheaval are transforming the workplace. What
-role do managers and HR professionals have in shaping how these transformations play out? In
-this course, we will debate whether, in responding to these challenges, those who manage people
-must choose between running a profitable business and treating their employees well.
-To arrive at an answer, we will begin by identifying the most pressing HR issues inside organizations
-today, ranging from burnout and scheduling inflexibility to earnings inequality and limited
-career mobility. Next, we will develop a framework for assessing and promoting high quality
-jobs. We will then use case studies, cutting-edge research, and conversations with business professionals
-and workers to explore how certain organizations are able to provide good jobs while
-remaining competitive. Throughout our exploration, we will have realistic conversations about
-how difficult it can be to drive positive change. At the end of the course, students will be asked to
-put forth their own ideas for balancing people and profits.
-    
-</details> 
-
-\
-
-**ILRHR 2685** *Building Better Jobs*
-<details> 
-<summary>Details</summary>
-    
-This  seminar explores the dirty, dull, and dangerous jobs that many science
-and technology experts believe can and should be replaced by robots, algorithms, artificial intelligence, and other recent innovations. Rather than accept that certain jobs are inherently bad, we
-will critically examine what can make even the toughest work rewarding and the most prestigious
-career unfulfilling. We will use our insights to sketch out the key determinants of a good
-quality job and then learn about evidence-based policies and practices that organizations can use
-to evaluate and improve the jobs they offer.
-    
-</details> 
-
-<br>
-
-#### <a id="media"></a> Media
-
-##### Authored by
-
-Crafting schedules that work for everyone: Improve retention and business performance with schedules that make sense for workers' lives. Coauthored with D. Sull. Forthcoming in *Sloan Management Review*.
-
-\
-
-##### Featured in
-
-[As the warehouse industry cools, will workers lose their leverage?](https://bizeconreporting.journalism.cuny.edu/2024/05/24/as-the-warehouse-industry-cools-will-workers-lose-their-leverage/). Burke, L (May 24, 2024). *The Invisible Hand*.
-
-[Amazon built the retail of today — its robots are building the Amazon of tomorrow](https://finance.yahoo.com/news/amazon-built-the-retail-of-today--its-robots-are-building-the-amazon-of-tomorrow-150249496.html). Garfinkle, A (Nov. 13, 2023). *Yahoo Finance*.
-
-[How mobile robots are redifining employment and efficiency](https://www.shrm.org/topics-tools/news/all-things-work/mobile-robots-work). Harbert, T (March 31, 2023). *All Things Work*.
-
-[How the warehouse boom devoured America's workforce](https://www.businessinsider.com/warehouse-jobs-economy-impact-blue-collar-pay-employment-hiring-boom-2022-10). Ito, A (Oct. 19, 2022). *Business Insider*.
-
-<br>
-
-#### <a id="contact"></a> Contact
+### Contact
 
 ```{r echo=FALSE}
 knitr::raw_html(
 'You can reach me at <span class="mailbox"><span class="e-mail" data-user="ikslawok.xela" data-website="ude.llenroc [ta] "></span></span>.')
 ```
 
-\
-
-###### [Top &olarr;](#header)  
 :::
 
 ::::

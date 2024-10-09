@@ -47,16 +47,17 @@ $('a.mail').on('click', function(){
 ::: {.nav}
 
 ![](images/headshot_chrtwn_1.jpg)
+<!--- note that the link text and id can't be the same or the link will go the link text -->
 
 #### [About](#header)
 
-#### [Research](#research)
+#### [Research](#rsrch)
 
-#### [Teaching](#teaching)
+#### [Teaching](#tch)
 
-#### [Media](#media)
+#### [Media](#md)
 
-#### [Contact](#contact)
+#### [Contact](#cntct)
 
 \ 
 
@@ -85,7 +86,7 @@ He received his PhD from MIT. He also holds a Master's in City Planning from UC-
 
 <br>
 
-#### <a id="research"></a>Research
+#### <a id="rsrch"></a>Research
 
 ##### Published
 
@@ -134,7 +135,7 @@ Kowalski, A.M. and Kelly, E.L. The toll of toil: The turnover costs of problemat
 
 <br>
 
-#### <a id="teaching"></a> Teaching
+#### <a id="tch"></a> Teaching
 
 Alex has developed two courses at Cornell. The first, *People and Profits: HR Strategies for Good Jobs*, is a class aimed at undergraduates and master's students that reviews the best practices that businesses are using to treat their employees well while remaining competitive. The second, *Building Better Jobs*, is an undergraduate seminar that draws on ethnographies of work to figure out what it would mean to have a high quality job in the age of automation. More details below.
 
@@ -174,7 +175,7 @@ to evaluate and improve the jobs they offer.
 
 <br>
 
-#### <a id="media"></a> Media
+#### <a id="md"></a> Media
 
 ##### Authored by
 
@@ -194,7 +195,7 @@ Crafting schedules that work for everyone: Improve retention and business perfor
 
 <br>
 
-#### <a id="contact"></a> Contact
+#### <a id="cntct"></a> Contact
 
 ```{r echo=FALSE}
 knitr::raw_html(

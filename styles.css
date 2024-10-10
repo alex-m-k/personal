@@ -12,7 +12,7 @@ tt, code, pre {
 
 h1 { 
    font-family: sans-serif;
-   font-size:1.74em; 
+   font-size:1.72em; 
    font-weight: 800;
 }
 
@@ -101,13 +101,12 @@ li:last-child {margin-bottom: 20px}
 .wrapper {
    display: grid; 
    grid-template-columns: [nav] 30% [text] 55%;
-   /*grid-template-rows:[top-margin] 80px [title-line] 40px [text] 1fr;*/
-   grid-template-rows:[top-margin] 80px [title-line] 40px [text] 1fr;
+   /*grid-template-rows:[top-margin] 15% [title-line] 7% [text] 50 %;*/
+   grid-template-rows:[top-margin] 60px [title-line] 20px [text] 1fr;
    /*grid-template-rows: [top-margin] 80px [title-line] 40px [text] 1fr;*/
    grid-column-gap: 20px;
    grid-row-gap: 5px;
 }
-
 
 .nameplate {
     grid-column-start: 1;
@@ -124,15 +123,21 @@ li:last-child {margin-bottom: 20px}
    margin-top:10px;
    position: sticky;
    align-self: start;
-   top: 150px;
-   
+   top: 100px;
+
 }
 
 .text {
    grid-column-start: 2;
    grid-column-end: 3;
-   margin-top:10px 
+   margin-top:60px
 }
+
+summary::marker {
+  /*color: #e162bf;*/
+  font-size: .75em;
+}
+
 
 @media print {
    * { 
@@ -193,14 +198,25 @@ li:last-child {margin-bottom: 20px}
             color: #4A19D2;
 }*/
 
+/*
 .mailbox {
   direction: rtl;
   unicode-bidi: bidi-override;
   text-align: left;
 }
+
 .e-mail:before {
   content: attr(data-website) attr(data-user);
   color: #4A19D2;
 
 }
+*/
 
+.e-mail {
+  color: #4A19D2;
+  
+}
+
+.e-mail b {
+	display: none;
+}

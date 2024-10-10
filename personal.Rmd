@@ -37,7 +37,7 @@ $('a.mail').on('click', function(){
 
 ::: {.nameplate}
 
-# ALEXANDER KOWALSKI
+ &nbsp;
 
 :::
 
@@ -46,6 +46,7 @@ $('a.mail').on('click', function(){
 :::
 
 ::: {.nav}
+# ALEXANDER KOWALSKI
 
 ![](images/headshot_chrtwn_1.jpg)
 <!--- note that the link text and id can't be the same or the link will go the link text -->
@@ -115,7 +116,7 @@ A massive open online course (MOOC) entitled “Shaping the Future of Work” (o
 Alex has developed two courses at Cornell. The first, *People and Profits: HR Strategies for Good Jobs*, is a class aimed at undergraduates and master's students that reviews the best practices that businesses are using to treat their employees well while remaining competitive. The second, *Building Better Jobs*, is an undergraduate seminar that draws on ethnographies of work to figure out what it would mean to have a high quality job in the age of automation. More details below.
 
 * **ILRHR 4645/6645** *People and Profits: HR Strategies for Good Jobs* <details> 
-<summary>Course details</summary>
+<summary>Show course details</summary>
 Economic, social, technological, and political upheaval are transforming the workplace. What
 role do managers and HR professionals have in shaping how these transformations play out? In
 this course, we will debate whether, in responding to these challenges, those who manage people
@@ -130,7 +131,7 @@ put forth their own ideas for balancing people and profits.
 </details> 
 
 * **ILRHR 2685** *Building Better Jobs* <details> 
-<summary>Course details</summary>
+<summary>Show course details</summary>
 This  seminar explores the dirty, dull, and dangerous jobs that many science
 and technology experts believe can and should be replaced by robots, algorithms, artificial intelligence, and other recent innovations. Rather than accept that certain jobs are inherently bad, we
 will critically examine what can make even the toughest work rewarding and the most prestigious
@@ -159,7 +160,7 @@ to evaluate and improve the jobs they offer.
 
 ```{r echo=FALSE}
 knitr::raw_html(
-'You can reach me at <span class="mailbox"><span class="e-mail" data-user="ikslawok.xela" data-website="ude.llenroc [ta] "></span></span>.')
+'You can reach me at <span class="mailbox"><span class="e-mail">alex<b>.email</b>.kowalski [at] cornell.edu</span></span>.')
 ```
 
 \

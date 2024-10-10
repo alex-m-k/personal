@@ -12,7 +12,9 @@ tt, code, pre {
 
 h1 { 
    font-family: sans-serif;
-   font-size:1.72em; 
+   /*font-size: 1.71em;*/
+   /*font-size: clamp(.8em, 1.71em, 10rem);*/
+   font-size: 1.52vw;
    font-weight: 800;
 }
 
@@ -92,7 +94,7 @@ hr {
 }
 
 ul li {
-     margin-left: -10px;
+     margin-left: -20px;
      margin-bottom: 5px;
 }
 
@@ -100,7 +102,7 @@ li:last-child {margin-bottom: 20px}
 
 .wrapper {
    display: grid; 
-   grid-template-columns: [nav] 30% [text] 55%;
+   grid-template-columns: [nav] 20vw [text] 40vw;
    /*grid-template-rows:[top-margin] 15% [title-line] 7% [text] 50 %;*/
    grid-template-rows:[top-margin] 60px [title-line] 20px [text] 1fr;
    /*grid-template-rows: [top-margin] 80px [title-line] 40px [text] 1fr;*/
@@ -120,17 +122,17 @@ li:last-child {margin-bottom: 20px}
    text-align: right;
    grid-column-start: 1;
    grid-column-end: 2;
-   margin-top:10px;
+   margin-top:5px;
    position: sticky;
    align-self: start;
-   top: 100px;
+   top: 135px;
 
 }
 
 .text {
    grid-column-start: 2;
    grid-column-end: 3;
-   margin-top:60px
+   margin-top:35px
 }
 
 summary::marker {

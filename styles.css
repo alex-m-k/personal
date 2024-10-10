@@ -140,6 +140,10 @@ summary::marker {
   font-size: .75em;
 }
 
+details {
+    text-align: justify;
+}
+
 
 @media print {
    * { 

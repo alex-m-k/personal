@@ -534,7 +534,7 @@ P(73);P(69);P(71);P(86);
 P(122);P(97);
 
 P(118);P(87);P(5);
-P(74);P(18);P(101);jb[1]=Rh('1',6E4);jb[3]=Rh('10',1);jb[2]=Rh('',50);
+P(74);P(101);jb[1]=Rh('1',6E4);jb[3]=Rh('10',1);jb[2]=Rh('',50);
 P(25);
 P(13);P(68);
 P(109);P(9);P(89);
@@ -556,7 +556,7 @@ b[g].name,m=b[g].value,n=b[g].index,p=Uh[k];p&&m&&(!Vh(k)||/^e\d+$/.test(m)||Wh.
 "last_name",g(ii));var m=a.home_address||{};e(m,"street",g(ji));e(m,"city",g(ji));e(m,"postal_code",g(ki));e(m,"region",g(ji));e(m,"country",g(ki));for(var n=ob(a.address||{}),p=0;p<n.length;p++){var q=n[p];f(q,"first_name",ii,p);f(q,"last_name",ii,p);f(q,"street",ji,p);f(q,"city",ji,p);f(q,"postal_code",ki,p);f(q,"region",ji,p);f(q,"country",ki,p)}return k},mi=function(a){var b=a?li(a):[];return ci({Ze:b})},ni=function(a){return a&&a!=null&&Object.keys(a).length>0&&C.Promise?li(a).some(function(b){return b.value&&
 Vh(b.name)&&!Oh.test(b.value)}):!1},di=function(a,b){var c=li(a);oi(c,b)},ei=function(a){return a==null?"":l(a)?xb(String(a)):"e0"},ki=function(a){return a.replace(pi,"")},ii=function(a){return ji(a.replace(/\s/g,""))},ji=function(a){return xb(a.replace(qi,"").toLowerCase())},hi=function(a){a=a.replace(/[\s-()/.]/g,"");a.charAt(0)!=="+"&&(a="+"+a);return ri.test(a)?a:"e0"},gi=function(a){var b=a.toLowerCase().split("@");if(b.length===2){var c=b[0];/^(gmail|googlemail)\./.test(b[1])&&(c=c.replace(/\./g,
 ""));c=c+"@"+b[1];if(si.test(c))return c}return"e0"},oi=function(a,b){var c=!1;if(c=Q(53)?!a.some(function(e){return e.value&&Vh(e.name)}):a.some(function(e){e.value&&Vh(e.name)}))b({Ze:a});else if(C.Promise){var d;Q(52)&&(d=Nc());Promise.all(a.map(function(e){return e.value&&Vh(e.name)?Qh(e.value).then(function(f){e.value=f}):Promise.resolve()})).then(function(){var e={Ze:a};if(Q(52)){var f=Nc();d&&f&&(e.time=Math.round(f)-Math.round(d))}b(e)}).catch(function(){b({Ze:[]})})}else b({Ze:[]})},qi=/[0-9`~!@#$%^&*()_\-+=:;<>,.?|/\\[\]]/g,
-si=/^\S+@\S+\.\S+$/,ri=/^\+\d{10,15}$/,pi=/[.~]/g,Wh=/^[0-9A-Za-z_-]{43}$/,ti={},Uh=(ti.email="em",ti.phone_number="pn",ti.first_name="fn",ti.last_name="ln",ti.street="sa",ti.city="ct",ti.region="rg",ti.country="co",ti.postal_code="pc",ti.error_code="ec",ti),ui={},fi=(ui.email="sha256_email_address",ui.phone_number="sha256_phone_number",ui.first_name="sha256_first_name",ui.last_name="sha256_last_name",ui.street="sha256_street",ui);var Yh=Object.freeze(["email","phone_number","first_name","last_name","street"]);var vi={},wi=C.google_tag_manager=C.google_tag_manager||{};vi.bh="4a70";vi.ve=Number("0")||0;vi.kb="dataLayer";vi.vn="ChEI8NOYuAYQ26THof7WrJ3mARIlAOSJzxf1JnbT4Ot06OrndiJKnXI5sasinPBgj9+tCSujpK5LTxoCXB0\x3d";var xi={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},yi={__paused:1,__tg:1},zi;for(zi in xi)xi.hasOwnProperty(zi)&&(yi[zi]=1);var Ai=vb("true"),Bi=!0,Ci,Di=!1;Di=!0;
+si=/^\S+@\S+\.\S+$/,ri=/^\+\d{10,15}$/,pi=/[.~]/g,Wh=/^[0-9A-Za-z_-]{43}$/,ti={},Uh=(ti.email="em",ti.phone_number="pn",ti.first_name="fn",ti.last_name="ln",ti.street="sa",ti.city="ct",ti.region="rg",ti.country="co",ti.postal_code="pc",ti.error_code="ec",ti),ui={},fi=(ui.email="sha256_email_address",ui.phone_number="sha256_phone_number",ui.first_name="sha256_first_name",ui.last_name="sha256_last_name",ui.street="sha256_street",ui);var Yh=Object.freeze(["email","phone_number","first_name","last_name","street"]);var vi={},wi=C.google_tag_manager=C.google_tag_manager||{};vi.bh="4a70";vi.ve=Number("0")||0;vi.kb="dataLayer";vi.vn="ChEI8NOYuAYQ26THof7WrJ3mARIlAOSJzxdGNmLbHyiYI8iYo1L6/aavdB5BP3P1YxWIw7D4uwjxahoCcko\x3d";var xi={__cl:1,__ecl:1,__ehl:1,__evl:1,__fal:1,__fil:1,__fsl:1,__hl:1,__jel:1,__lcl:1,__sdl:1,__tl:1,__ytl:1},yi={__paused:1,__tg:1},zi;for(zi in xi)xi.hasOwnProperty(zi)&&(yi[zi]=1);var Ai=vb("true"),Bi=!0,Ci,Di=!1;Di=!0;
 Ci=Di;var Ei,Fi=!1;Ei=Fi;var Gi,Hi=!1;Gi=Hi;vi.Id="www.googletagmanager.com";var Ii=""+vi.Id+(Ci?"/gtag/js":"/gtm.js"),Ji=null,Ki=null,Li={},Mi={};function Ni(){var a=wi.sequence||1;wi.sequence=a+1;return a}vi.xk="true";var Oi="";vi.eh=Oi;var Pi=new function(){this.j="";this.H=!1;this.C=0;this.P=this.Z=this.Ra=this.K=""};function Qi(){var a=Pi.K.length;return Pi.K[a-1]==="/"?Pi.K.substring(0,a-1):Pi.K}function Ri(){return Pi.H&&Pi.C!==1}function Si(a){for(var b={},c=h(a.split("|")),d=c.next();!d.done;d=c.next())b[d.value]=!0;return b}var Ti=new sb,Ui={},Vi={},Yi={name:vi.kb,set:function(a,b){Sa(Hb(a,b),Ui);Wi()},get:function(a){return Xi(a,2)},reset:function(){Ti=new sb;Ui={};Wi()}};function Xi(a,b){return b!=2?Ti.get(a):Zi(a)}function Zi(a,b){var c=a.split(".");b=b||[];for(var d=Ui,e=0;e<c.length;e++){if(d===null)return!1;if(d===void 0)break;d=d[c[e]];if(b.indexOf(d)!==-1)return}return d}function $i(a,b){Vi.hasOwnProperty(a)||(Ti.set(a,b),Sa(Hb(a,b),Ui),Wi())}
 function aj(){for(var a=["gtm.allowlist","gtm.blocklist","gtm.whitelist","gtm.blacklist","tagTypeBlacklist"],b=0;b<a.length;b++){var c=a[b],d=Xi(c,1);if(Array.isArray(d)||Qa(d))d=Sa(d);Vi[c]=d}}function Wi(a){z(Vi,function(b,c){Ti.set(b,c);Sa(Hb(b),Ui);Sa(Hb(b,c),Ui);a&&delete Vi[b]})}function bj(a,b){var c,d=(b===void 0?2:b)!==1?Zi(a):Ti.get(a);Na(d)==="array"||Na(d)==="object"?c=Sa(d):c=d;return c};
 var cj=function(a,b,c){if(!c)return!1;var d=c.selector_type,e=String(c.value),f=Q(107),g;if(f||d==="js_variable")for(var k=e.replace(/\["?'?/g,".").replace(/"?'?\]/g,"").split(","),m=0;m<k.length;m++){var n=k[m].trim();if(n&&!Eb(n,"#")&&!Eb(n,".")){if(Eb(n,"dataLayer."))g=Xi(n.substring(10));else{var p=n.split(".");g=C[p.shift()];for(var q=0;q<p.length;q++)g=g&&g[p[q]]}if(g!==void 0)break}}if((f&&g===void 0||!f&&d==="css_selector")&&Kh)try{var r=Jh(e);if(r&&r.length>0){g=[];for(var t=0;t<r.length&&
@@ -1008,7 +1008,7 @@ function IJ(){wi[Zj()]=wi[Zj()]||HJ;jk();nk()||z(ok(),function(d,e){Ew(d,e.trans
 [],C["google.tagmanager.debugui2.queue"]=x,wc("https://"+vi.Id+"/debug/bootstrap?id="+Nf.ctid+"&src="+w+"&cond="+v+"&gtm="+oo()));var y={messageType:"CONTAINER_STARTING",data:{scriptSource:qc,containerProduct:u,debug:!1,id:Nf.ctid,targetRef:{ctid:Nf.ctid,isDestination:Sj.se},aliases:Vj(),destinations:Yj()}};y.data.resume=function(){a()};vi.xk&&(y.data.initialPublish=!0);x.push(y)},k={Uk:1,mj:2,Aj:3,si:4,kj:5};k[k.Uk]="GTM_DEBUG_LEGACY_PARAM";k[k.mj]="GTM_DEBUG_PARAM";k[k.Aj]="REFERRER";k[k.si]="COOKIE";k[k.kj]="EXTENSION_PARAM";
 var m=void 0,n=void 0,p=jj(C.location,"query",!1,void 0,"gtm_debug");Uy(p)&&(m=k.mj);if(!m&&E.referrer){var q=pj(E.referrer);lj(q,"host")==="tagassistant.google.com"&&(m=k.Aj)}if(!m){var r=zo("__TAG_ASSISTANT");r.length&&r[0].length&&(m=k.si)}m||b();if(!m&&Vy(n)){var t=!1;Bc(E,"TADebugSignal",function(){t||(t=!0,b(),c())},!1);C.setTimeout(function(){t||(t=!0,b(),c())},200)}else c()})(function(){try{var a;if(!(a=!Q(59))){var b;if(!(b=JJ)){var c;a:{for(var d=Pj(),e=h(Uj()),f=e.next();!f.done;f=e.next())if(d.injectedFirstPartyContainers[f.value]){c=
 !0;break a}c=!1}b=!c}a=b}if(a){hk();if(Q(77)){}ib[12]=!0;In();vl();var g=bk();if(Pj().canonical[g]){var k=wi.zones;k&&k.unregisterChild(Uj());pw().removeExternalRestrictions(bk());}else{iu();
-Pi.j="101533421~101671035~101686685~101747727";Pi.K="";Pi.Ra="ad_storage|analytics_storage|ad_user_data|ad_personalization";
+Pi.j="101533421~101671035~101686685";Pi.K="";Pi.Ra="ad_storage|analytics_storage|ad_user_data|ad_personalization";
 Pi.Z="ad_storage|analytics_storage|ad_user_data";Pi.P="4a10";Pi.P="4a30";Aw();for(var m=data.resource||{},n=m.macros||[],p=0;p<n.length;p++)ff.push(n[p]);for(var q=m.tags||[],r=0;r<q.length;r++)jf.push(q[r]);for(var t=m.predicates||[],v=0;v<t.length;v++)hf.push(t[v]);for(var u=
 m.rules||[],w=0;w<u.length;w++){for(var x=u[w],y={},A=0;A<x.length;A++){var B=x[A][0];y[B]=Array.prototype.slice.call(x[A],1);B!=="if"&&B!=="unless"||pf(y[B])}gf.push(y)}lf=Y;mf=zz;Jf=new Qf;var D=data.sandboxed_scripts,H=data.security_groups;a:{var J=data.runtime||[],G=data.runtime_lines;Lz=new ze;jJ();ef=Kz();var O=Lz,L=iJ(),S=new Vc("require",L);S.Ma();O.j.j.set("require",S);for(var ca=[],Z=0;Z<J.length;Z++){var U=J[Z];if(!Array.isArray(U)||U.length<3){if(U.length===0)continue;break a}G&&G[Z]&&
 G[Z].length&&Af(U,G[Z]);try{Lz.execute(U),Q(88)&&Fj&&U[0]===50&&ca.push(U[1])}catch(Un){}}Q(88)&&(rf=ca)}if(D&&D.length)for(var R=["sandboxedScripts"],ma=0;ma<D.length;ma++){var na=D[ma].replace(/^_*/,"");Mi[na]=R}kJ(H);IJ();if(!Gi)for(var ja=el()?Si(Pi.Z):Si(Pi.Ra),xa=0;xa<il.length;xa++){var Oa=il[xa],Ea=Oa,Ra=ja[Oa]?"granted":"denied";Ek().implicit(Ea,Ra)}Ty();Jw=!1;Kw=0;if(E.readyState==="interactive"&&!E.createEventObject||E.readyState==="complete")Mw();else{Bc(E,"DOMContentLoaded",Mw);Bc(E,
@@ -1064,7 +1064,7 @@ if (window.hljs) {
 
 
 
-<style type="text/css">body, td {font-family: serif;background-color: white;font-size: 12px;margin: 8px;}tt, code, pre {font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;}h1 { font-family: sans-serif;font-size:1.74em; font-weight: 800;}h2, h3, h4, h5, h6 {font-family: sans-serif;}h2 { font-size:1.8em; }h3 { font-size:1.4em; }h4 { font-size:1.0em; }h5 { font-size:0.9em; }h6 { font-size:0.8em; }a:link, a:visited, a:hover, a:active {color: rgb(74, 25, 210);}pre {	margin-top: 0;max-width: 95%;border: 1px solid #ccc;white-space: pre-wrap;}pre code {display: block; padding: 0.5em;}code.r, code.cpp {background-color: #F8F8F8;}table, td, th {border: none;}blockquote {color:#666666;margin:0;padding-left: 1em;border-left: 0.5em #EEE solid;}hr {height: 0px;border-bottom: none;border-top-width: thin;border-top-style: dotted;border-top-color: #999999;}.wrapper {display: grid; grid-template-columns: [nav] 30% [text] 55%; grid-template-rows:[top-margin] 80px [title-line] 40px [text] 1fr;grid-column-gap: 20px;grid-row-gap: 5px;}.nameplate {grid-column-start: 1;grid-column-end: 3;}.nav {text-align: right;grid-column-start: 1;grid-column-end: 2;margin-top:10px }.text {grid-column-start: 2;grid-column-end: 3;margin-top:10px }@media print {* { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }body { font-size:12pt; max-width:100%; }a, a:visited { text-decoration: underline; }hr { visibility: hidden;page-break-before: always;}pre, blockquote { padding-right: 1em; page-break-inside: avoid; }tr, img { page-break-inside: avoid; }img { max-width: 100% !important; }@page :left { margin: 15mm 20mm 15mm 10mm; }@page :right { margin: 15mm 10mm 15mm 20mm; }p, h2, h3 { orphans: 3; widows: 3; }h2, h3 { page-break-after: avoid; }}.mailbox {direction: rtl;unicode-bidi: bidi-override;text-align: left;}.e-mail:before {content: attr(data-website) attr(data-user);color: #4A19D2;}</style>
+<style type="text/css">body, td {font-family: serif;background-color: white;font-size: 12px;margin: 8px;}tt, code, pre {font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;}h1 { font-family: sans-serif;font-size:1.74em; font-weight: 800;}h2, h3, h4, h5, h6 {font-family: sans-serif;}h2 { font-size:1.8em; }h3 { font-size:1.4em; }h4 { font-size:1.0em; }h5 { font-size:0.9em; }h6 { font-size:0.8em; }a:link, a:visited, a:hover, a:active {color: rgb(74, 25, 210);}pre {	margin-top: 0;max-width: 95%;border: 1px solid #ccc;white-space: pre-wrap;}pre code {display: block; padding: 0.5em;}code.r, code.cpp {background-color: #F8F8F8;}table, td, th {border: none;}blockquote {font-family: serif;background-color: white;font-size: 12px;margin:0;padding-left: 0.5em;border-left: #ffffff solid;}p.block_text {padding-left: 0.5em;}hr {height: 0px;border-bottom: none;border-top-width: thin;border-top-style: dotted;border-top-color: #999999;}ul li {margin-left: -10px;margin-bottom: 5px;}li:last-child {margin-bottom: 20px}.wrapper {display: grid; grid-template-columns: [nav] 30% [text] 55%;grid-template-rows:[top-margin] 80px [title-line] 40px [text] 1fr;grid-column-gap: 20px;grid-row-gap: 5px;}.nameplate {grid-column-start: 1;grid-column-end: 3;margin-top:80px;position: fixed;align-items: start;}.nav {text-align: right;grid-column-start: 1;grid-column-end: 2;margin-top:10px;position: sticky;align-self: start;top: 150px;}.text {grid-column-start: 2;grid-column-end: 3;margin-top:10px }@media print {* { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }body { font-size:12pt; max-width:100%; }a, a:visited { text-decoration: underline; }hr { visibility: hidden;page-break-before: always;}pre, blockquote { padding-right: 1em; page-break-inside: avoid; }tr, img { page-break-inside: avoid; }img { max-width: 100% !important; }@page :left { margin: 15mm 20mm 15mm 10mm; }@page :right { margin: 15mm 10mm 15mm 20mm; }p, h2, h3 { orphans: 3; widows: 3; }h2, h3 { page-break-after: avoid; }}.mailbox {direction: rtl;unicode-bidi: bidi-override;text-align: left;}.e-mail:before {content: attr(data-website) attr(data-user);color: #4A19D2;}</style>
 
 
 
@@ -1204,11 +1204,6 @@ $('a.mail').on('click', function(){
 <div id="contact" class="section level4">
 <h4><a href="#cntct">Contact</a></h4>
 <p> </p>
-<br />
-
-<p align="justify">
-<em>A note to practitioners</em>: A key component of my work is going inside workplaces to speak with workers and managers, those who know the challenges best and who also often have the best idea for how to fix things. Do you run, work for, or know a company that wants to offer better jobs or that should be highlighted for already offering them? <a href="#contact">Reach out</a> and tell me about it.
-</p>
 </div>
 </div>
 <div class="text">
@@ -1224,102 +1219,99 @@ $('a.mail').on('click', function(){
 <h4><a id="rsrch"></a>Research</h4>
 <div id="published" class="section level5">
 <h5>Published</h5>
-<!-- ::: {#refs_published} -->
-<!-- ::: -->
-Riordan, C. A., &amp; Kowalski, A. M. (2021). <a href="https://doi.org/10.1177/0019793920970868">From bread and roses to #MeToo: Multiplicity, distance, and the changing dynamics of conflict in IR theory</a>. <em>ILR Review</em>, 74(3), 580–606.
+<ul>
+<li>Riordan, C. A., &amp; Kowalski, A. M. (2021). <a href="https://doi.org/10.1177/0019793920970868">From bread and roses to #MeToo: Multiplicity, distance, and the changing dynamics of conflict in IR theory</a>. <em>ILR Review</em>, 74(3), 580–606.
 <details>
 <summary>
 Show abstract
 </summary>
-<p>A central assumption in industrial relations theory is that conflict is rooted in an enduring difference between the interests of labor and management. In recent years, the reality of work has changed for many, and scholarship has called attention to overlooked dimensions of conflict that depart from this assumption. The authors account for these developments with the concepts of <em>multiplicity</em> and <em>distance</em>. Multiplicity means that a broad range of actors bring diverse goals, tied to identities and values in addition to interests, to the employment relationship. The competing and fluid motivations that stem from these goals alter how actors individually and collectively name conflict. Distance reflects a growing rift between those who control work and those who labor, rooted in prevailing organizational forms and practices and the transformation of institutions. Distance alters actors’ interdependence and their perceived and actual power in addressing conflict. From these observations, the authors derive propositions suggesting directions for research and theory regarding conflict and the institutions through which actors balance goals.</p>
-</details>
-<p><br />
-</p>
-Kochan, T. A., Riordan, C. A., Kowalski, A. M., Khan, M., &amp; Yang, D. (2019). <a href="https://doi.org/10.1146/annurev-orgpsych-012218-015335">The changing nature of employee and labor-management relationships</a>. <em>Annual Review of Organizational Psychology and Organizational Behavior</em>, 6(1), 195–219.
+A central assumption in industrial relations theory is that conflict is rooted in an enduring difference between the interests of labor and management. In recent years, the reality of work has changed for many, and scholarship has called attention to overlooked dimensions of conflict that depart from this assumption. The authors account for these developments with the concepts of <em>multiplicity</em> and <em>distance</em>. Multiplicity means that a broad range of actors bring diverse goals, tied to identities and values in addition to interests, to the employment relationship. The competing and fluid motivations that stem from these goals alter how actors individually and collectively name conflict. Distance reflects a growing rift between those who control work and those who labor, rooted in prevailing organizational forms and practices and the transformation of institutions. Distance alters actors’ interdependence and their perceived and actual power in addressing conflict. From these observations, the authors derive propositions suggesting directions for research and theory regarding conflict and the institutions through which actors balance goals.
+</details></li>
+<li>Kochan, T. A., Riordan, C. A., Kowalski, A. M., Khan, M., &amp; Yang, D. (2019). <a href="https://doi.org/10.1146/annurev-orgpsych-012218-015335">The changing nature of employee and labor-management relationships</a>. <em>Annual Review of Organizational Psychology and Organizational Behavior</em>, 6(1), 195–219.
 <details>
 <summary>
 Show abstract
 </summary>
-<p>This article reviews work and employment research, paying particular attention to theory and applications by scholars in organizational psychology and organizational behavior (OP/OB) and employment or industrial relations (ER), with the objective of better understanding employee and labor-management relationships. Our animating premise is that juxtaposing these two research traditions provides a stronger basis for analyzing these relationships today. OP/OB offer micro- and meso-level focuses, whereas ER focuses on organizations, collective actors, and labor markets, with an emphasis on historical context. We hope this review motivates efforts to think about and build new social and psychological contracts that are attuned to the evolving dynamics present in the economy, workforce, and society. To this end, we look to the future and propose ways of deepening, broadening, and accelerating the pace of research that might lead to useful changes in practices, institutions, and public policies.</p>
-</details>
-<p><br />
-</p>
-Kochan, T. A., Dyer, L., Cutcher-Gershenfeld, J., &amp; Kowalski, A. M. (2018). <a href="https://doi.org/10.1111%2Fnejo.12223">Negotiating a new social contract for work: An online, distributed approach</a>. <em>Negotiation Journal</em>, 34(2), 187–206.
+This article reviews work and employment research, paying particular attention to theory and applications by scholars in organizational psychology and organizational behavior (OP/OB) and employment or industrial relations (ER), with the objective of better understanding employee and labor-management relationships. Our animating premise is that juxtaposing these two research traditions provides a stronger basis for analyzing these relationships today. OP/OB offer micro- and meso-level focuses, whereas ER focuses on organizations, collective actors, and labor markets, with an emphasis on historical context. We hope this review motivates efforts to think about and build new social and psychological contracts that are attuned to the evolving dynamics present in the economy, workforce, and society. To this end, we look to the future and propose ways of deepening, broadening, and accelerating the pace of research that might lead to useful changes in practices, institutions, and public policies.
+</details></li>
+<li>Kochan, T. A., Dyer, L., Cutcher-Gershenfeld, J., &amp; Kowalski, A. M. (2018). <a href="https://doi.org/10.1111%2Fnejo.12223">Negotiating a new social contract for work: An online, distributed approach</a>. <em>Negotiation Journal</em>, 34(2), 187–206.
 <details>
 <summary>
 Show abstract
 </summary>
-<p>A massive open online course (MOOC) entitled “Shaping the Future of Work” (offered through MITx, the Massachusetts Institute of Technology’s online learning division) has been the context for a multiparty simulation designed to produce classroom negotiation results that will have social impacts. After running the course in the MOOC context three times and in face‐to‐face settings eight times, we noticed that key themes emerged. Participants have brought their own workforce perspectives to their simulation roles as employers, worker representatives, elected officials, and educators. They have called for reciprocal agreements centered on fair treatment and representation in the workplace, improved organizational performance, investments in skills and capabilities, aligned rewards and benefits for workers, and work–life balance in communities. We continue to use the simulation in the classroom and are exploring ways to expand its use. In the meantime, in this article, we discuss how the insights gleaned from this simulation could be used to crystallize and advance a new social contract at a time when the public policies, institutions, and organizational practices governing employment relations have not kept up with the dramatic changes taking place in the workforce, nature of work, and overall economy.</p>
-</details>
-<p><br />
-</p>
+A massive open online course (MOOC) entitled “Shaping the Future of Work” (offered through MITx, the Massachusetts Institute of Technology’s online learning division) has been the context for a multiparty simulation designed to produce classroom negotiation results that will have social impacts. After running the course in the MOOC context three times and in face‐to‐face settings eight times, we noticed that key themes emerged. Participants have brought their own workforce perspectives to their simulation roles as employers, worker representatives, elected officials, and educators. They have called for reciprocal agreements centered on fair treatment and representation in the workplace, improved organizational performance, investments in skills and capabilities, aligned rewards and benefits for workers, and work–life balance in communities. We continue to use the simulation in the classroom and are exploring ways to expand its use. In the meantime, in this article, we discuss how the insights gleaned from this simulation could be used to crystallize and advance a new social contract at a time when the public policies, institutions, and organizational practices governing employment relations have not kept up with the dramatic changes taking place in the workforce, nature of work, and overall economy.
+</details></li>
+</ul>
 </div>
 <div id="work-in-progress" class="section level5">
 <h5>Work in progress</h5>
-<p>Kowalski, A.M., Gutelius, B., Pinto, S. &amp; Vallas, S.P. At the mercy of the market? Technology, e-commerce, and warehouse work in the United States.</p>
-<p>Kowalski, A.M., Kelly, E.L.,, Rahmandad, H., &amp; Siebach, K. Can involving employees reduce turnover? A field experiment on employee voice and exit.</p>
-<p>Kowalski, A.M. How to squeeze the lemon: Local organizational cultures and varied management practices.</p>
-<p>Kowalski, A.M. and Kelly, E.L. The toll of toil: The turnover costs of problematic work schedules.</p>
-<p><br></p>
+<ul>
+<li><p>Kowalski, A.M., Gutelius, B., Pinto, S. &amp; Vallas, S.P. At the mercy of the market? Technology, e-commerce, and warehouse work in the United States.</p></li>
+<li><p>Kowalski, A.M., Kelly, E.L.,, Rahmandad, H., &amp; Siebach, K. Can involving employees reduce turnover? A field experiment on employee voice and exit.</p></li>
+<li><p>Kowalski, A.M. How to squeeze the lemon: Local organizational cultures and varied management practices.</p></li>
+<li><p>Kowalski, A.M. and Kelly, E.L. The toll of toil: The turnover costs of problematic work schedules.</p></li>
+</ul>
 </div>
 </div>
 <div id="teaching-1" class="section level4">
 <h4><a id="tch"></a> Teaching</h4>
 <p>Alex has developed two courses at Cornell. The first, <em>People and Profits: HR Strategies for Good Jobs</em>, is a class aimed at undergraduates and master’s students that reviews the best practices that businesses are using to treat their employees well while remaining competitive. The second, <em>Building Better Jobs</em>, is an undergraduate seminar that draws on ethnographies of work to figure out what it would mean to have a high quality job in the age of automation. More details below.</p>
-<strong>ILRHR 4645/6645</strong> <em>People and Profits: HR Strategies for Good Jobs</em>
+<ul>
+<li><strong>ILRHR 4645/6645</strong> <em>People and Profits: HR Strategies for Good Jobs</em>
 <details>
 <summary>
-Details
+Course details
 </summary>
-<p>Economic, social, technological, and political upheaval are transforming the workplace. What
+Economic, social, technological, and political upheaval are transforming the workplace. What
 role do managers and HR professionals have in shaping how these transformations play out? In
 this course, we will debate whether, in responding to these challenges, those who manage people
 must choose between running a profitable business and treating their employees well.
 To arrive at an answer, we will begin by identifying the most pressing HR issues inside organizations
 today, ranging from burnout and scheduling inflexibility to earnings inequality and limited
 career mobility. Next, we will develop a framework for assessing and promoting high quality
-jobs. We will then use case studies, cutting-edge research, and conversations with business professionals
-and workers to explore how certain organizations are able to provide good jobs while
+jobs. We will then use case studies, cutting-edge research, and conversations with business professionals and workers to explore how certain organizations are able to provide good jobs while
 remaining competitive. Throughout our exploration, we will have realistic conversations about
 how difficult it can be to drive positive change. At the end of the course, students will be asked to
-put forth their own ideas for balancing people and profits.</p>
-</details>
-<p><br />
-</p>
-<strong>ILRHR 2685</strong> <em>Building Better Jobs</em>
+put forth their own ideas for balancing people and profits.
+</details></li>
+<li><strong>ILRHR 2685</strong> <em>Building Better Jobs</em>
 <details>
 <summary>
-Details
+Course details
 </summary>
-<p>This seminar explores the dirty, dull, and dangerous jobs that many science
+This seminar explores the dirty, dull, and dangerous jobs that many science
 and technology experts believe can and should be replaced by robots, algorithms, artificial intelligence, and other recent innovations. Rather than accept that certain jobs are inherently bad, we
 will critically examine what can make even the toughest work rewarding and the most prestigious
 career unfulfilling. We will use our insights to sketch out the key determinants of a good
 quality job and then learn about evidence-based policies and practices that organizations can use
-to evaluate and improve the jobs they offer.</p>
-</details>
-<p><br></p>
+to evaluate and improve the jobs they offer.
+</details></li>
+</ul>
 </div>
 <div id="media-1" class="section level4">
 <h4><a id="md"></a> Media</h4>
 <div id="authored-by" class="section level5">
 <h5>Authored by</h5>
-<p>Crafting schedules that work for everyone: Improve retention and business performance with schedules that make sense for workers’ lives. Coauthored with D. Sull. Forthcoming in <em>Sloan Management Review</em>.</p>
-<p><br />
-</p>
+<ul>
+<li>Crafting schedules that work for everyone: Improve retention and business performance with schedules that make sense for workers’ lives. Coauthored with D. Sull. Forthcoming in <em>Sloan Management Review</em>.</li>
+</ul>
 </div>
 <div id="featured-in" class="section level5">
 <h5>Featured in</h5>
-<p><a href="https://bizeconreporting.journalism.cuny.edu/2024/05/24/as-the-warehouse-industry-cools-will-workers-lose-their-leverage/">As the warehouse industry cools, will workers lose their leverage?</a>. Burke, L (May 24, 2024). <em>The Invisible Hand</em>.</p>
-<p><a href="https://finance.yahoo.com/news/amazon-built-the-retail-of-today--its-robots-are-building-the-amazon-of-tomorrow-150249496.html">Amazon built the retail of today — its robots are building the Amazon of tomorrow</a>. Garfinkle, A (Nov. 13, 2023). <em>Yahoo Finance</em>.</p>
-<p><a href="https://www.shrm.org/topics-tools/news/all-things-work/mobile-robots-work">How mobile robots are redifining employment and efficiency</a>. Harbert, T (March 31, 2023). <em>All Things Work</em>.</p>
-<p><a href="https://www.businessinsider.com/warehouse-jobs-economy-impact-blue-collar-pay-employment-hiring-boom-2022-10">How the warehouse boom devoured America’s workforce</a>. Ito, A (Oct. 19, 2022). <em>Business Insider</em>.</p>
-<p><br></p>
+<ul>
+<li><p><a href="https://bizeconreporting.journalism.cuny.edu/2024/05/24/as-the-warehouse-industry-cools-will-workers-lose-their-leverage/">As the warehouse industry cools, will workers lose their leverage?</a>. Burke, L (May 24, 2024). <em>The Invisible Hand</em>.</p></li>
+<li><p><a href="https://finance.yahoo.com/news/amazon-built-the-retail-of-today--its-robots-are-building-the-amazon-of-tomorrow-150249496.html">Amazon built the retail of today — its robots are building the Amazon of tomorrow</a>. Garfinkle, A (Nov. 13, 2023). <em>Yahoo Finance</em>.</p></li>
+<li><p><a href="https://www.shrm.org/topics-tools/news/all-things-work/mobile-robots-work">How mobile robots are redifining employment and efficiency</a>. Harbert, T (March 31, 2023). <em>All Things Work</em>.</p></li>
+<li><p><a href="https://www.businessinsider.com/warehouse-jobs-economy-impact-blue-collar-pay-employment-hiring-boom-2022-10">How the warehouse boom devoured America’s workforce</a>. Ito, A (Oct. 19, 2022). <em>Business Insider</em>.</p></li>
+</ul>
 </div>
 </div>
 <div id="contact-1" class="section level4">
 <h4><a id="cntct"></a> Contact</h4>
 You can reach me at <span class="mailbox"><span class="e-mail" data-user="ikslawok.xela" data-website="ude.llenroc [ta] "></span></span>.
+<p><br />
+</p>
+<p><em>A note to practitioners</em>: A key component of my work is going inside workplaces to speak with workers and managers, those who know the challenges best and who also often have the best idea for how to fix things. Do you run, work for, or know a company that wants to offer better jobs or that should be highlighted for already offering them? Reach out and tell me about it.</p>
 <p><br />
 </p>
 <div id="top" class="section level6">

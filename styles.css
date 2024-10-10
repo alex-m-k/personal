@@ -10,7 +10,6 @@ tt, code, pre {
 }
 
 
-
 h1 { 
    font-family: sans-serif;
    font-size:1.74em; 
@@ -70,10 +69,18 @@ table, td, th {
 }
 
 blockquote {
-   color:#666666;
+   font-family: serif;
+   background-color: white;
+   font-size: 12px;
    margin:0;
-   padding-left: 1em;
-   border-left: 0.5em #EEE solid;
+   padding-left: 0.5em;
+   /*border-left: 0.25em #ffffff solid;*/
+   border-left:  #ffffff solid;
+
+}
+
+p.block_text {
+    padding-left: 0.5em;
 }
 
 hr {
@@ -84,9 +91,17 @@ hr {
    border-top-color: #999999;
 }
 
+ul li {
+     margin-left: -10px;
+     margin-bottom: 5px;
+}
+
+li:last-child {margin-bottom: 20px}
+
 .wrapper {
    display: grid; 
-   grid-template-columns: [nav] 30% [text] 55%; 
+   grid-template-columns: [nav] 30% [text] 55%;
+   /*grid-template-rows:[top-margin] 80px [title-line] 40px [text] 1fr;*/
    grid-template-rows:[top-margin] 80px [title-line] 40px [text] 1fr;
    /*grid-template-rows: [top-margin] 80px [title-line] 40px [text] 1fr;*/
    grid-column-gap: 20px;
@@ -97,13 +112,20 @@ hr {
 .nameplate {
     grid-column-start: 1;
     grid-column-end: 3;
+   margin-top:80px;
+   position: fixed;
+   align-items: start;
 }
 
 .nav {
    text-align: right;
    grid-column-start: 1;
    grid-column-end: 2;
-   margin-top:10px 
+   margin-top:10px;
+   position: sticky;
+   align-self: start;
+   top: 150px;
+   
 }
 
 .text {

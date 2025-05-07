@@ -49,6 +49,9 @@ $('a.mail').on('click', function(){
 
 ![](images/headshot_chrtwn_1.jpg)
 <!--- note that the link text and id can't be the same or the link will go the link text -->
+<!-- note that I had trouble updating the repo after generating a new token. the reason was
+     that when generating a new token, you need to give it permissions now - in other words,
+     check all the boxes below the token to make sure it can actually edit -->
 
 #### [About](#header)
 

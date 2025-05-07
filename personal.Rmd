@@ -2,7 +2,7 @@
 pagetitle: "Alexander Kowalski"
 output: 
   bookdown::html_document2:
-    # pandoc_args: --lua-filter=multiple-bibliographies.lua # This was creating issuesb
+    # pandoc_args: --lua-filter=multiple-bibliographies.lua # This was creating issues
     includes:
       in_header: ["header.html", "ga_Script.html"]
     css: styles.css
@@ -103,15 +103,14 @@ This article reviews work and employment research, paying particular attention t
 A massive open online course (MOOC) entitled “Shaping the Future of Work” (offered through MITx, the Massachusetts Institute of Technology's online learning division) has been the context for a multiparty simulation designed to produce classroom negotiation results that will have social impacts. After running the course in the MOOC context three times and in face‐to‐face settings eight times, we noticed that key themes emerged. Participants have brought their own workforce perspectives to their simulation roles as employers, worker representatives, elected officials, and educators. They have called for reciprocal agreements centered on fair treatment and representation in the workplace, improved organizational performance, investments in skills and capabilities, aligned rewards and benefits for workers, and work–life balance in communities. We continue to use the simulation in the classroom and are exploring ways to expand its use. In the meantime, in this article, we discuss how the insights gleaned from this simulation could be used to crystallize and advance a new social contract at a time when the public policies, institutions, and organizational practices governing employment relations have not kept up with the dramatic changes taking place in the workforce, nature of work, and overall economy.
 </details> 
 
-
 ##### Work in progress
 
-* Kowalski, A.M., Gutelius, B., Pinto, S. & Vallas, S.P. At the mercy of the market? E-commerce and warehouse work in the United States. <details> 
+* Kowalski, A.M., Gutelius, B., Pinto, S., & Vallas, S.P. At the mercy of the market? E-commerce and warehouse work in the United States. <details> 
 <summary>Show abstract</summary>
 Logistics work has become central to the economy as online shopping has grown into a familiar consumer practice. Yet little research has systematically studied work inside warehouses, a key location in the logistics system. The authors examine the quality of warehouse employment, testing the proposition that, as retailers compete for online consumers, their emphasis on e-commerce exposes workers to harsher job conditions. They use data from three surveys, one providing a national sample of warehouse workers in the U.S. and two targeting workers at Walmart and Amazon, the country’s major retail rivals. They find that e-commerce negatively affects warehouse job quality but that these effects are most pronounced at Amazon, whose business depends more heavily on online transactions. Future research should explore whether retailers competing with Amazon feel pressured to adopt similar labor practices, serving customers in ways that exact a toll on workers employed behind the screen.
 </details> 
 
-* Kowalski, A.M., Kelly, E.L.,, Rahmandad, H., & Siebach, K. [Can a voice channel reduce turnover? Evidence on employee voice and exit from a cluster-randomized trial in U.S. fulfillment centers.](http://ssrn.com/abstract=5193024) <details> 
+* Kowalski, A.M., Kelly, E.L., Rahmandad, H., & Siebach, K. F. [Can a voice channel reduce turnover? Evidence on employee voice and exit from a cluster-randomized trial in U.S. fulfillment centers.](http://ssrn.com/abstract=5193024) <details> 
 <summary>Show abstract</summary>
 Building on the long tradition of research on employee voice and its potential impact on both employee and organizational outcomes, we investigate whether a new voice channel reduces turnover in e-commerce fulfillment centers. A cluster-randomized trial compared hourly workers in sites randomized to launch the new voice channel (Health and Well-Being Committees, or HaWCs) with those employed by the same firm in control sites. This participatory intervention involved a small group of frontline workers and supervisors who solicited concerns and ideas about safety, work processes, and other workplace stressors from the broader workforce and then developed and implemented improvement projects in response. HaWCs were an isolated change, rather than one component of a broader high-involvement work system, and they were implemented in non-union worksites, raising questions about their likely impact. Using administrative data on the population of hourly workers, an intent-to-treat (ITT) analysis finds individual workers’ monthly probability of exit fell by 1.3%-points in HaWC buildings in the year after randomization, representing a 20% decline relative to pre-intervention exit rates. Workers in buildings where HaWCs completed more projects were less likely to exit, showing that voice can yield visible improvements in the work environment that help retain workers. HaWCs also reduced exits over and above both pre-existing and new, alternative channels for soliciting employee input, suggesting that additional benefits flow from the HaWCs’ participatory nature. These findings indicate the feasibility of addressing turnover and improving the work environment through employee voice, even in tough conditions like fulfillment centers.
 </details> 
@@ -119,6 +118,20 @@ Building on the long tradition of research on employee voice and its potential i
 * Kowalski, A.M. Unfulfilled: Collaborative robots and the persistence of tough jobs in e-commerce warehousing. <details> 
 <summary>Show abstract</summary>
 This paper investigates how collaborative robots transform work in e-commerce fulfillment centers (FCs). While collaborative robots are heralded for their potential to enhance jobs by augmenting human capabilities, taking on undesirable tasks, and giving workers more command over their work, the actual effects of these technologies on work and workers are underexplored. Using data from a survey of more than 1,500 hourly workers employed in 16 FCs operated by a U.S. retailer, I compare job content and worker attitudes across facilities that use one of three main technologies to retrieve customer orders: collaborative robots, conveyors, and hand-pulled carts. The findings show that collaborative robots do not significantly improve job quality compared to the older technologies. Relative to workers in cart facilities, workers in robotic facilities report lower levels of job satisfaction, decision authority, skill discretion, and support from supervisors and coworkers, along with increased job insecurity, turnover intentions, and alienation. The reported levels are similar to those found in conveyor facilities. In light of these findings, collaborative robots appear to be a refined means of worker control rather than a liberating departure from past automating technologies. They are likely to impose burdens on a growing number of workers as the e-commerce industry expands and as they find their way into other sectors.
+</details> 
+
+* Siebach, K.F., Díaz-Linhart, Y.L., Kubzansky, L.D., Berkman, L., Wang, M., Ge, L., Kowalski, A.M.,  Rahmandad, H., & Kelly, E.L. Effectiveness of a participatory voice intervention on psychological well-being among warehouse workers: Results from the fulfillment center intervention study. <details> 
+<summary>Show abstract</summary>
+Objectives. To examine whether a novel workplace intervention designed to increase worker voice can reduce psychological distress and improve emotional vitality at 6- and 12-months follow-up. 
+\
+\
+Methods. We conducted a cluster-randomized trial between 2021 and 2023 in 16 fulfillment centers (e-commerce warehouses) throughout the United States. Surveys captured psychological distress and emotional vitality of frontline workers at three time points; 2813 workers participated in at least one survey. Fulfillment centers randomized to the intervention established a new, participatory committee called the Health and Well-Being Committee (HaWC). We used separate multilevel linear regression models to estimate intervention effects on psychological distress and emotional vitality. We also explored differential treatment effect by gender.
+\
+\
+Results. Baseline prevalence of moderate or severe psychological distress was 51%. Workers in intervention sites had lower average psychological distress at 6-months compared to control sites. However, there was no significant intervention effect at the 12-month follow-up. Gender analyses suggest the HaWC was particularly effective in reducing psychological distress among men at 6-month follow-up.
+\
+\
+Conclusions. Our study contributes important experimental evidence on workplace interventions that improve the mental well-being of low-wage U.S. populations.
 </details> 
 
 * Kowalski, A.M. How to squeeze the lemon: Local organizational cultures and varied management practices.

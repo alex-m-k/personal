@@ -59,6 +59,8 @@ $('a.mail').on('click', function(){
 
 #### [Teaching](#tch)
 
+#### [Resources](#tools)
+
 #### [Media](#md)
 
 #### [Contact](#cntct)
@@ -167,20 +169,29 @@ quality job and then learn about evidence-based policies and practices that orga
 to evaluate and improve the jobs they offer.
 </details> 
 
+#### <a id="tools"></a> Resources
+
+Here are select materials, based on Alex's research, for those who work in and manage organizations.
+
+* What makes for an ideal work schedule, and how can you offer one? Check out this comprehensive review of research on scheduling best practices:
+  * [Craft schedules that work for everyone](https://sloanreview.mit.edu/article/craft-schedules-that-work-for-everyone/). Coauthored with D. Sull. *Sloan Management Review* (Dec. 10, 2024).
+
+* Want to promote employee voice at your organization and reap the benefits that follow? Here are detailed resources on launching your own version of the voice initiative Alex has studied in warehouses, which improved employee retention and well-being:
+  * [Starting a workplace Health and Well-Being Committee: A step-by-step guide for managers](https://mitsloan.mit.edu/centers-initiatives/institute-work-and-employment-research/starting-a-workplace-health-and-well-being-committee-a-step-step-guide-managers) Institute for Work & Employment Research, MIT Sloan. (July 18, 2025).
+  
+*A note to practitioners*: A key component of my work is going inside workplaces to speak with workers and managers, those who know the challenges best and who also often have the best idea for how to fix things. Do you run, work for, or know a company that wants to offer better jobs or that should be highlighted for already offering them? Reach out and tell me about it.
+
+
+
 #### <a id="md"></a> Media
 
-##### Authored by
-
-* [Craft schedules that work for everyone](https://sloanreview.mit.edu/article/craft-schedules-that-work-for-everyone/). Coauthored with D. Sull. *Sloan Management Review* (Dec. 10, 2024).
-
-
-##### Featured in
+* [Spotlight: An interview with Alexander Kowalski](https://www.asanet.org/wp-content/uploads/2025/05/Economic-Sociology-2025-Spring.pdf) [PDF]. (Spring 2025). *Accounts*, the ASA Economic Sociology newsletter.
 
 * [As the warehouse industry cools, will workers lose their leverage?](https://bizeconreporting.journalism.cuny.edu/2024/05/24/as-the-warehouse-industry-cools-will-workers-lose-their-leverage/). Burke, L (May 24, 2024). *The Invisible Hand*.
 
 * [Amazon built the retail of today — its robots are building the Amazon of tomorrow](https://finance.yahoo.com/news/amazon-built-the-retail-of-today--its-robots-are-building-the-amazon-of-tomorrow-150249496.html). Garfinkle, A (Nov. 13, 2023). *Yahoo Finance*.
 
-* [How mobile robots are redifining employment and efficiency](https://www.shrm.org/topics-tools/news/all-things-work/mobile-robots-work). Harbert, T (March 31, 2023). *All Things Work*.
+* [How mobile robots are redefining employment and efficiency](https://www.shrm.org/topics-tools/news/all-things-work/mobile-robots-work). Harbert, T (March 31, 2023). *All Things Work*.
 
 * [How the warehouse boom devoured America's workforce](https://www.businessinsider.com/warehouse-jobs-economy-impact-blue-collar-pay-employment-hiring-boom-2022-10). Ito, A (Oct. 19, 2022). *Business Insider*.
 
@@ -190,8 +201,6 @@ to evaluate and improve the jobs they offer.
 knitr::raw_html(
 '<p>You can reach me at <span class="mailbox"><span class="e-mail">alex<b>.email</b>.kowalski [at] cornell.edu</span></span>.</p>')
 ```
-
-*A note to practitioners*: A key component of my work is going inside workplaces to speak with workers and managers, those who know the challenges best and who also often have the best idea for how to fix things. Do you run, work for, or know a company that wants to offer better jobs or that should be highlighted for already offering them? Reach out and tell me about it.
 
 \
 

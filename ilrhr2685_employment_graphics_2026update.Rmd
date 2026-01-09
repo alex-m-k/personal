@@ -1,0 +1,157 @@
+---
+title: "Job growth in occupations susceptible to generative AI"
+author: "Alexander Kowalski"
+date: '2026-01-09'
+output: 
+  html_document:
+    keep_md: TRUE
+---
+
+```{r setup, include=FALSE}
+# NOTE because I am now using Felten et al and giving 50 occupations
+#   I am switching to OES dataset. I don't think their is an API for that
+#   so I need to load in all the files
+
+# Global display options
+knitr::opts_chunk$set(message=FALSE, 
+                      idy.opts=list(width.cutoff=60),
+                      fig.align="center") 
+
+knitr::knit_hooks$set(inline = function(x) { 
+  if(!is.numeric(x)){ x }
+  else{prettyNum(round(x,2), big.mark=",") } })
+
+# Packages
+library(here)
+library(knitr)
+library(kableExtra)
+library(blsR)
+library(blscrapeR)
+library(ggplot2)
+library(tidyverse)
+library(RColorBrewer)
+library(matrixStats)
+library(readxl)
+library(purrr)
+library(stringr)
+
+# Graphic print options 
+plot_theme <- theme(panel.border = element_blank(), 
+                    panel.grid.major = element_blank(),
+                    panel.grid.minor = element_blank(), 
+                    axis.line = element_line(colour = "black"),
+                    legend.text=element_text(size=8), 
+                    legend.title=element_text(size=10),
+                    legend.key = element_rect(colour = NA)) +
+  theme_bw()
+
+```
+
+```{r get_data, include=FALSE, cache=TRUE}
+# Attempt to find BLS series IDs with code
+jobs <- read.csv("feltenetal_predictions.csv")
+
+# A few jobs changed and we need to use broad category
+jobs$Occupation[jobs$SOC.Code == "13-1023"] <- "Buyers and Purchasing Agents"
+jobs$SOC.Code[jobs$SOC.Code == "13-1023"] <- "13-1020"
+jobs$Occupation[jobs$SOC.Code == "27-3022"] <- "News Analysts, Reporters and Journalists"
+jobs$SOC.Code[jobs$SOC.Code == "27-3022"] <- "27-3020"
+jobs$Occupation[jobs$SOC.Code == "21-1014"] <- "Substance Abuse, Behavioral Disorder, and Mental Health Counselors"
+jobs$SOC.Code[jobs$SOC.Code ==  "21-1014"] <- "21-1018"
+
+file.list <- list.files(path = "ilrhr2685_data", pattern='*.xls', full.names = T, recursive = T)
+# Keep only those with oes data
+file.list <- file.list[grepl("oesm", file.list)]
+file.list <- file.list[grepl("national", file.list)]
+jobs.data <- map_dfr( file.list, ~ read_excel(.x)
+                      %>% mutate_if(is.numeric, as.character)
+                      %>% mutate(year = str_match( .x, "M\\d{4}" )[,1] ) )
+jobs.data <- jobs.data %>% select(year, everything())
+jobs.data$year <- gsub("M", "", jobs.data$year)
+jobs.data <- jobs.data[, c("year", "OCC_CODE", "OCC_TITLE", "TOT_EMP")]
+jobs.data <- jobs.data %>% arrange(OCC_CODE, year)
+jobs.data <- unique(jobs.data)
+
+# Drop farm laborers becasue creating issue
+jobs.data <- jobs.data[jobs.data$OCC_TITLE != "Farm Labor Contractors", ]
+jobs.data <- jobs.data %>% mutate(across(c(year, TOT_EMP), ~as.numeric(.x)))
+
+# This one split into more detailed ones, so I need to combine
+jobs.data_add <- data.frame("year" = c(2021, 2022, 2023, 2024),
+                            "OCC_CODE" = "19-3031",
+                            "OCC_TITLE" = "Clinical, Counseling, and School Psychologists",
+                            "TOT_EMP" = NA)
+
+
+jobs.data_add$TOT_EMP[jobs.data_add$year == 2021] <- jobs.data$TOT_EMP[jobs.data$year == 2021 & jobs.data$OCC_CODE == "19-3033"] + jobs.data$TOT_EMP[jobs.data$year == 2021 & jobs.data$OCC_CODE == "19-3034"]
+jobs.data_add$TOT_EMP[jobs.data_add$year == 2022] <- jobs.data$TOT_EMP[jobs.data$year == 2022 & jobs.data$OCC_CODE == "19-3033"] + jobs.data$TOT_EMP[jobs.data$year == 2022 & jobs.data$OCC_CODE == "19-3034"]
+jobs.data_add$TOT_EMP[jobs.data_add$year == 2023] <- jobs.data$TOT_EMP[jobs.data$year == 2023 & jobs.data$OCC_CODE == "19-3033"] + jobs.data$TOT_EMP[jobs.data$year == 2023 & jobs.data$OCC_CODE == "19-3034"]
+jobs.data_add$TOT_EMP[jobs.data_add$year == 2024] <- jobs.data$TOT_EMP[jobs.data$year == 2024 & jobs.data$OCC_CODE == "19-3033"] + jobs.data$TOT_EMP[jobs.data$year == 2024 & jobs.data$OCC_CODE == "19-3034"]
+
+jobs.data <- rbind(jobs.data, jobs.data_add)
+
+# Need to fix a few titles that change
+jobs.data$OCC_TITLE[jobs.data$OCC_TITLE == "Family and Consumer Sciences Teachers, Postsecondary"] <- "Home Economics Teachers, Postsecondary"
+jobs.data$OCC_TITLE[jobs.data$OCC_TITLE == "Teachers and Instructors, All Other, Except Substitute Teachers"] <- "Teachers and Instructors, All Other"
+
+jobs.data <- jobs.data[jobs.data$OCC_CODE %in% c(jobs$SOC.Code, "00-0000"), ]
+
+# Two names for one
+jobs.data$OCC_TITLE[jobs.data$OCC_TITLE == "News Analysts, Reporters and Correspondents"] <- "News Analysts, Reporters and Journalists"
+
+# Normalize the growth
+jobs.data <- jobs.data %>%
+  group_by(OCC_CODE) %>%
+  mutate(base_value = TOT_EMP[year == min(year)],
+         norm_value = ((TOT_EMP / base_value) -1) * 100)
+
+
+```
+
+The following graphs use BLS data to show how much a given occupation's employment has changed over the past decade or so. Each graph displays the percent change in an occupation's employment levels relative to the first year the graph begins. It also compares this change to the overall change in employment across all occupations in the U.S.
+
+The occupations are selected from [Felten et al.'s](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4414065) (2023) paper estimating occupational exposure to generative AI.
+
+### Select occupation {.tabset}
+
+```{r graphs, results='asis', echo=FALSE}
+
+i <- 1
+
+for(code in jobs$SOC.Code){
+  
+job <- jobs$Occupation[jobs$SOC.Code == code]
+  
+df <- jobs.data[jobs.data$OCC_CODE %in% c(code, "00-0000"), ]
+
+cat("\n")
+
+cat("####", paste0(i, ". ", job, "\n"))
+
+fig <- ggplot(df,
+              aes(x = year, 
+                  y = norm_value,
+                  color = OCC_TITLE)) +
+        geom_line(aes(linetype = OCC_TITLE)) +
+        scale_x_continuous(breaks = ~ axisTicks(., log = FALSE)) +
+        scale_linetype_manual(values=c("dashed", "solid"), guide = "none")+
+        # labs(title =  paste0("Change in employment levels for ", job),
+          labs(title =  "Change in employment levels",
+             x = "Year",
+             y = "Percent change in employment levels",
+             color = "Occupation") +
+        ylim(-135, 135) +
+        plot_theme +
+        theme(legend.position ="bottom")
+
+print(fig)
+
+cat("\n")
+
+i <- i + 1
+  
+}
+
+
+```
+

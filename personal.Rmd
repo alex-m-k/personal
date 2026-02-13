@@ -106,7 +106,9 @@ simultaneously reducing the role of brick-and-mortar stores. The authors test th
 an e-commerce strategy hinging on speedy delivery. They pale in significance at Walmart, which emphasizes low prices. Future research should explore whether firms vying for e-commerce business are likely to emulate Amazon, converging on a set of labor practices that diminish work conditions in a growing sector.
 </details> 
 
-* Siebach, K.F., Díaz-Linhart, Y.L., Kubzansky, L.D., Berkman, L., Wang, M., Ge, L., Kowalski, A.M.,  Rahmandad, H., & Kelly, E.L. [Effectiveness of a participatory voice intervention on psychological well-being among warehouse workers: Results from the fulfillment center intervention study](https://ajph.aphapublications.org/doi/10.2105/AJPH.2025.308352). Forthcoming in *American Journal of Public Health*. <details> 
+* Siebach, K.F., Díaz-Linhart, Y.L., Kubzansky, L.D., Berkman, L., Wang, M., Ge, L., Kowalski, A.M.,  Rahmandad, H., & Kelly, E.L. [Effectiveness of a participatory voice intervention on psychological well-being among warehouse workers: Results from the fulfillment center intervention study](https://ajph.aphapublications.org/doi/10.2105/AJPH.2025.308352). Forthcoming in *American Journal of Public Health*. 
+[[Download pre-print PDF]](https://hdl.handle.net/1721.1/164869)
+<details> 
 <summary>Show abstract</summary>
 Objectives. To examine whether a novel workplace intervention designed to increase worker voice can reduce psychological distress and improve emotional vitality at 6- and 12-months follow-up.  
 \

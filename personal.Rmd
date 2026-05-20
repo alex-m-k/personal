@@ -80,8 +80,6 @@ Fulfillment centers are part of the rapidly evolving warehousing industry. A set
 
 By conducting his research out in the field, in actual workplaces, Alex tries to make his findings useful for business practitioners. He brings these insights into the classroom, where he teaches classes on High Road, high performance management and human resource practices, as well as on the ingredients of a good job.
 
-Alex's earlier work takes a broader look at the changing nature of work and organizations and has been published in *ILR Review*, *Annual Review of Organizational Psychology and Organizational Behavior*, and *Negotiation Journal*.
-
 He received his PhD from MIT. He also holds a Master's in City Planning from UC-Berkeley. Before graduate school, he was an economics reporter for Bloomberg News.
 
 <br>
@@ -89,6 +87,12 @@ He received his PhD from MIT. He also holds a Master's in City Planning from UC-
 #### <a id="rsrch"></a>Research
 
 ##### Published
+* Kowalski, A.M., Gutelius, B., Pinto, S., & Vallas, S.P. [At the mercy of the market? E-commerce and warehouse work in the United States](https://journals.sagepub.com/doi/10.1177/00197939261444716). Forthcoming in *ILR Review*. 
+[[Download pre-print PDF]](papers/at_the_mercy_of_the_market_finalversion_11032025.pdf)
+<details> 
+<summary>Show abstract</summary>
+The growing popularity of e-commerce has made warehouses increasingly vital to retailing. The authors test the proposition that competition for online consumers translates into harsher work conditions inside the warehouses that make e-commerce possible. They use data from three surveys, one providing a national sample of US warehouse workers and two targeting those at Walmart and Amazon, the country’s largest retailers. In the national sample, job quality and worker well-being are lower in warehouses engaged in e-commerce than in traditional warehouses, but this relationship varies across the two firms. The negative effects are most pronounced at Amazon’s e-commerce warehouses, which emphasize speedy delivery. These same effects are less significant at Walmart’s facilities, which aim to offer low prices. Future research should explore whether firms vying for e-commerce business are likely to emulate Amazon, converging on a set of labor practices that diminish work conditions in a growing sector.
+</details> 
 
 * Kowalski, A.M. [Unfulfilled: Collaborative robots and the persistence of tough jobs in e-commerce warehousing](https://doi.org/10.1177/07308884251400283). Forthcoming in *Work and Occupations*. 
 [[Download PDF]](https://hdl.handle.net/1813/118373)
@@ -97,16 +101,7 @@ He received his PhD from MIT. He also holds a Master's in City Planning from UC-
 This paper investigates workers’ experiences with collaborative robots in e-commerce fulfillment centers (FCs). Powered by the latest algorithmic technologies, collaborative robots operate alongside their users rather than independently. There are conflicting accounts of how they will impact job quality. On the one hand, they are dismissed for reducing worker autonomy and permitting more pervasive means of managerial control. On the other, they are heralded for augmenting human capabilities, taking on undesirable tasks, and giving workers more command over their jobs. Yet the actual effects of collaborative robots are underexplored. Using data from a survey of more than 1,500 hourly workers employed in 16 FCs operated by a U.S. retailer, I compare job characteristics and worker attitudes across facilities that use one of three main technologies to retrieve customer orders: collaborative robots, conveyors, or hand-pulled carts. The findings show that, compared to the older technologies, collaborative robots are not associated with significantly better jobs. Relative to workers in cart facilities, workers in robotics facilities report lower levels of job satisfaction, decision authority, skill discretion, and supervisor and coworker support, along with increased job insecurity, turnover intentions, and alienation. These levels are similar to those reported in conveyor facilities. In light of these findings, collaborative robots appear to be a refined means of managerial control rather than a liberating departure from past automating technologies. They are likely to impose burdens on growing numbers of workers as the e-commerce industry expands and as they find their way into other sectors.
 </details> 
 
-* Kowalski, A.M., Gutelius, B., Pinto, S., & Vallas, S.P. At the mercy of the market? E-commerce and warehouse work in the United States. Forthcoming in *ILR Review*. 
-[[Download pre-print PDF]](papers/at_the_mercy_of_the_market_finalversion_11032025.pdf)
-<details> 
-<summary>Show abstract</summary>
-The popularity of e-commerce has expanded the importance of warehouses while
-simultaneously reducing the role of brick-and-mortar stores. The authors test the proposition that competition for online consumers translates into harsher work conditions inside the warehouses that make e-commerce possible. They use data from three surveys, one providing a national sample of U.S. warehouse workers and two targeting those at Walmart and Amazon, the country’s largest retailers. As predicted, job quality and worker well-being are lower in warehouses engaged in e-commerce compared to traditional warehouses, but this relationship varies across the two firms. The negative effects are most pronounced at Amazon, which follows
-an e-commerce strategy hinging on speedy delivery. They pale in significance at Walmart, which emphasizes low prices. Future research should explore whether firms vying for e-commerce business are likely to emulate Amazon, converging on a set of labor practices that diminish work conditions in a growing sector.
-</details> 
-
-* Siebach, K.F., Díaz-Linhart, Y.L., Kubzansky, L.D., Berkman, L., Wang, M., Ge, L., Kowalski, A.M.,  Rahmandad, H., & Kelly, E.L. [Effectiveness of a participatory voice intervention on psychological well-being among warehouse workers: Results from the fulfillment center intervention study](https://ajph.aphapublications.org/doi/10.2105/AJPH.2025.308352). Forthcoming in *American Journal of Public Health*. 
+* Siebach, K.F., Díaz-Linhart, Y.L., Kubzansky, L.D., Berkman, L., Wang, M., Ge, L., Kowalski, A.M.,  Rahmandad, H., & Kelly, E.L. (2026). [Effectiveness of a participatory voice intervention on psychological well-being among warehouse workers: Results from the fulfillment center intervention study](https://ajph.aphapublications.org/doi/10.2105/AJPH.2025.308352). *American Journal of Public Health*, 116(4), 522-532. 
 [[Download pre-print PDF]](https://hdl.handle.net/1721.1/164869)
 <details> 
 <summary>Show abstract</summary>
@@ -192,6 +187,8 @@ Here are select materials, based on Alex's research, for those who work in and m
 
 
 #### <a id="md"></a> Media
+
+* [Fast deliveries worsen conditions for e-commerce warehouse workers](https://news.cornell.edu/stories/2026/05/fast-deliveries-worsen-conditions-e-commerce-warehouse-workers). Dean, J (May 19, 2026). *Cornell Chronicle*.
 
 * [Spotlight: An interview with Alexander Kowalski](https://www.asanet.org/wp-content/uploads/2025/05/Economic-Sociology-2025-Spring.pdf) [PDF]. (Spring 2025). *Accounts*, the ASA Economic Sociology newsletter.
 

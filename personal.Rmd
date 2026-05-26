@@ -88,7 +88,7 @@ He received his PhD from MIT. He also holds a Master's in City Planning from UC-
 
 ##### Published
 * Kowalski, A.M., Gutelius, B., Pinto, S., & Vallas, S.P. [At the mercy of the market? E-commerce and warehouse work in the United States](https://journals.sagepub.com/doi/10.1177/00197939261444716). Forthcoming in *ILR Review*. 
-[[Download pre-print PDF]](papers/at_the_mercy_of_the_market_finalversion_11032025.pdf)
+[[Download PDF]](https://ecommons.cornell.edu/entities/publication/9fe7886d-b3dd-4b62-97dc-d0fa7f3cdc7b)
 <details> 
 <summary>Show abstract</summary>
 The growing popularity of e-commerce has made warehouses increasingly vital to retailing. The authors test the proposition that competition for online consumers translates into harsher work conditions inside the warehouses that make e-commerce possible. They use data from three surveys, one providing a national sample of US warehouse workers and two targeting those at Walmart and Amazon, the country’s largest retailers. In the national sample, job quality and worker well-being are lower in warehouses engaged in e-commerce than in traditional warehouses, but this relationship varies across the two firms. The negative effects are most pronounced at Amazon’s e-commerce warehouses, which emphasize speedy delivery. These same effects are less significant at Walmart’s facilities, which aim to offer low prices. Future research should explore whether firms vying for e-commerce business are likely to emulate Amazon, converging on a set of labor practices that diminish work conditions in a growing sector.

@@ -1,7 +1,7 @@
 ---
 title: "Job growth in occupations susceptible to generative AI"
 author: "Alexander Kowalski"
-date: '2026-01-09'
+date: '2026-08-21'
 output: 
   html_document:
     keep_md: TRUE

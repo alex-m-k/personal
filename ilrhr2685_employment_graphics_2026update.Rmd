@@ -1,7 +1,7 @@
 ---
 title: "Job growth in occupations susceptible to generative AI"
 author: "Alexander Kowalski"
-date: '2026-01-09'
+date: '2026-08-21'
 output: 
   html_document:
     keep_md: TRUE
@@ -72,21 +72,47 @@ jobs.data <- jobs.data[, c("year", "OCC_CODE", "OCC_TITLE", "TOT_EMP")]
 jobs.data <- jobs.data %>% arrange(OCC_CODE, year)
 jobs.data <- unique(jobs.data)
 
-# Drop farm laborers becasue creating issue
+# Drop farm laborers because creating issue
 jobs.data <- jobs.data[jobs.data$OCC_TITLE != "Farm Labor Contractors", ]
+jobs.data <- as.data.frame(jobs.data)
 jobs.data <- jobs.data %>% mutate(across(c(year, TOT_EMP), ~as.numeric(.x)))
 
+# One title gets is combined before 2017
+jobs.data_add <- data.frame("year" = c(2012:2016),
+                            "OCC_CODE" = "21-1018",
+                            "OCC_TITLE" = "Substance Abuse, Behavioral Disorder, and Mental Health Counselors",
+                            "TOT_EMP" = NA)
+
+# This could be written as an apply function to save redundancy
+jobs_combine <- function(dat_source, year, job_1, job_2){
+  sum <- dat_source[dat_source$year == year & dat_source$OCC_CODE == job_1, "TOT_EMP"] + dat_source[dat_source$year == year & dat_source$OCC_CODE == job_2, "TOT_EMP"]
+
+ return(sum)  
+ 
+}
+
+for(year in 2012:2016){
+  jobs.data_add$TOT_EMP[jobs.data_add$year == year] <- jobs_combine(jobs.data,
+                                                                    year,
+                                                                    "21-1011",
+                                                                    "21-1014")
+  
+}
+
+jobs.data <- rbind(jobs.data, jobs.data_add)
+
+# Could apply above code to this one too
 # This one split into more detailed ones, so I need to combine
-jobs.data_add <- data.frame("year" = c(2021, 2022, 2023, 2024),
+jobs.data_add <- data.frame("year" = c(2021, 2022, 2023, 2024, 2025),
                             "OCC_CODE" = "19-3031",
                             "OCC_TITLE" = "Clinical, Counseling, and School Psychologists",
                             "TOT_EMP" = NA)
-
 
 jobs.data_add$TOT_EMP[jobs.data_add$year == 2021] <- jobs.data$TOT_EMP[jobs.data$year == 2021 & jobs.data$OCC_CODE == "19-3033"] + jobs.data$TOT_EMP[jobs.data$year == 2021 & jobs.data$OCC_CODE == "19-3034"]
 jobs.data_add$TOT_EMP[jobs.data_add$year == 2022] <- jobs.data$TOT_EMP[jobs.data$year == 2022 & jobs.data$OCC_CODE == "19-3033"] + jobs.data$TOT_EMP[jobs.data$year == 2022 & jobs.data$OCC_CODE == "19-3034"]
 jobs.data_add$TOT_EMP[jobs.data_add$year == 2023] <- jobs.data$TOT_EMP[jobs.data$year == 2023 & jobs.data$OCC_CODE == "19-3033"] + jobs.data$TOT_EMP[jobs.data$year == 2023 & jobs.data$OCC_CODE == "19-3034"]
 jobs.data_add$TOT_EMP[jobs.data_add$year == 2024] <- jobs.data$TOT_EMP[jobs.data$year == 2024 & jobs.data$OCC_CODE == "19-3033"] + jobs.data$TOT_EMP[jobs.data$year == 2024 & jobs.data$OCC_CODE == "19-3034"]
+jobs.data_add$TOT_EMP[jobs.data_add$year == 2025] <- jobs.data$TOT_EMP[jobs.data$year == 2025 & jobs.data$OCC_CODE == "19-3033"] + jobs.data$TOT_EMP[jobs.data$year == 2025 & jobs.data$OCC_CODE == "19-3034"]
 
 jobs.data <- rbind(jobs.data, jobs.data_add)
 
@@ -140,7 +166,7 @@ fig <- ggplot(df,
              x = "Year",
              y = "Percent change in employment levels",
              color = "Occupation") +
-        ylim(-135, 135) +
+        ylim(-80, 155) +
         plot_theme +
         theme(legend.position ="bottom")
 
